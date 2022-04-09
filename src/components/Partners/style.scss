@@ -1,0 +1,21 @@
+.partners{
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 90px;
+        &-card{
+            border: 1px solid #DADDE6;
+            border-radius: 30px;
+            width: 250px;
+            height: 212px;
+            box-sizing: border-box;
+        }
+        &-img{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

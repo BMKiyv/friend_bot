@@ -1,0 +1,57 @@
+
+   
+.btn {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  transition: .3s ease-in-out;
+  text-decoration: none;
+  padding: 17px 38px;
+  min-width: 156px;
+  text-align: center;
+  max-width: 320px;
+  cursor: pointer;
+
+  @media screen and (max-width: 340px) {
+    max-width: 300px;
+  }
+
+  &_text {
+    font-size: 16px;
+  }
+
+  span {
+    font-weight: bold;
+    letter-spacing: 0.2px;
+  }
+
+  &-main {
+    background-color: var(--blue-color);
+    border-color: var(--blue-color);
+
+    &:hover {
+      background-color: var(--second-color);
+    }
+
+    span {
+      color: var(--white);
+    }
+  }
+
+  &-second {
+    background-color: rgba(var(--white), .34);
+    border-color: var(--white);
+
+    &:hover {
+      background-color: rgba(var(--white), .60);
+    }
+
+    span {
+      color: var(--main-color);
+    }
+  }
+
+  &-full {
+    width: 100%;
+  }
+}

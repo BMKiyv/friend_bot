@@ -1,0 +1,66 @@
+@import './fonts.scss';
+@import './sprite.scss';
+@import './variables.scss';
+
+#root{
+  font-family: 'Rubik Regular', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  color: var(--second-color);
+  letter-spacing: -0.01em;
+  background: var(--white);
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+}
+h1{
+  font-size: 44px;
+  line-height: 59px;
+  text-align: left;
+  color: var(--main-color);
+}
+
+h2{
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 54px;
+  color: var(--main-color);
+}
+
+h3{
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 54px;
+  color: var(--main-color);
+}
+
+.container{
+  max-width: calc(100% - 120px);
+  margin: 0 auto;
+}
+
+.solid{
+  color: var(--main-color);
+}
+
+.bold{
+  font-weight: bold;
+}
+
+

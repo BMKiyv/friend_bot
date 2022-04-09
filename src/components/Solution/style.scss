@@ -1,0 +1,36 @@
+.solution{
+    margin-top: 47px;
+    margin-bottom: 80px;
+    &__wrap{
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+        column-gap: 15px;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        padding: 38px;
+        text-align: center;
+        background: var(--card-background);
+        border-radius: 30px;
+        height: 234px;
+    &__header{
+        margin-bottom: 12px;
+    }
+    &-img{
+        width: 174px;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+    }
+    &-text{
+        display: inline-block;
+        margin-top: auto;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    }
+    
+}

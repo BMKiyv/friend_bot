@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Suspense} from 'react';
+import{Outlet} from 'react-router-dom';
+import Header from './components/Header';
+import First from './components/First';
+import Solution from './components/Solution';
+import Footer from './components/Footer';
+import HowItWork from './components/HowItWork';
+import Principles from './components/Principles';
+import Partners from './components/Partners';
+import About from './components/About';
+import Answers from './components/Answers';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense >
+      <div className="App">
+        <Header />
+        <First />
+        <Solution />
+        <HowItWork />
+        <Principles/>
+        <Partners />
+        <About />
+        <Answers />
+        <Footer />
+      </div>
+      <Outlet />
+    </Suspense>
   );
 }
 

@@ -1,0 +1,38 @@
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 360px;
+    grid-template-areas:
+        'h b'
+        'i b';
+    margin-top: 116px;
+    margin-bottom: 70px;
+    &__header{
+        grid-area: h;
+    }
+    &__items{
+        grid-area: i;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: end;
+        &-text{
+            width: 50%;
+            line-height: 24px;
+            &:first-child{
+                width: 64%;
+            }
+            &:last-child{
+                width: 64%;
+            }
+        }
+    }
+    &__background{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        border-radius: 30px;
+        background-image: url('../../img/aboutback.png');
+        grid-area: b;
+    }
+}
