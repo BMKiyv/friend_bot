@@ -31,7 +31,7 @@
         &-images{
             display: flex;
             flex-wrap: wrap;
-            width: 75%;
+            width: 80%;
         }
         &-image{
             background: var(--white);
@@ -65,7 +65,8 @@
             width: 75%;
             font-size: 20px;
             line-height: 34px;
-                padding: 30px 0;
+            padding: 30px 0;
+            font-weight: bold;
         }
         &-smalltext{
             width: 75%;
