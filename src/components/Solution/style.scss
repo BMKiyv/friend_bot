@@ -2,10 +2,9 @@
     margin-top: 47px;
     margin-bottom: 80px;
     &__wrap{
-        align-items: center;
-        justify-content: space-around;
-        display: flex;
-        column-gap: 15px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 15px;
+        display: grid;
         margin-top: 12px;
     }
     &__card{
@@ -20,7 +19,7 @@
         margin-bottom: 12px;
     }
     &-img{
-        width: 174px;
+        //width: 174px;
             height: 50%;
             display: flex;
             justify-content: center;

@@ -30,7 +30,7 @@ const Partners = () => {
         }
     ]
     return (
-        <div className='container'>
+        <div className='container' id='partners'>
             <h3>Партнери</h3>
             <div className='partners__cards'>
                 {partners.map((item,i)=>{

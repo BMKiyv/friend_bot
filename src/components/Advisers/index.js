@@ -40,14 +40,14 @@ const Advisers = () => {
         }
     ]
     return (
-        <div className='container advisers'>
+        <div className='container advisers' id='advisers'>
             <h3 className='advisers__title'>Едвайзери</h3>
             <div className='advisers__list'>
                 {advisers.map((item,i)=>{
                     return item.shortDescription?
                     <div className='advisers__list-item' key={i}>
                         <img className='advisers__list' src={item.src} alt={item.name}/>
-                        <p className='advisers__list-title'>{item.name}</p>
+                        <p className='advisers__list-title solid bold'>{item.name}</p>
                         <p className='advisers__list-shortdescription'>{item.shortDescription}</p>
                         <p className='advisers__list-description' style={{'display':'none'}}>{item.description}</p>
                         <div className='advisers__list-btn'>

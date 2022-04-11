@@ -24,7 +24,7 @@ const Solution = () => {
         }
     ]
     return (
-        <div className='container solution'>
+        <div className='container solution' id='solution'>
             <h3 className='solution__header'>Наше рішення:</h3>
             <div className='solution__wrap'>
                 {cardData.map((item, i) => {

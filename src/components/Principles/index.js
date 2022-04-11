@@ -35,7 +35,7 @@ const Principles = () => {
         }
     ]
     return (
-        <div className='container principles'>
+        <div className='container principles' id='principles'>
             <h3>Наші прінципи:</h3>
             <div className='principles__content'>
                 {principles.map((item,i)=>{
@@ -43,7 +43,7 @@ const Principles = () => {
                         <div className='principles__content-item' key={i}>
                             <figure className={item.className}/>
                             <div className='principles__content-mean'>
-                                <p className='principles__content-header solid'>{item.header}</p>
+                                <p className='principles__content-header solid bold'>{item.header}</p>
                                 <p className='principles__content-text'>{item.text}</p>
                             </div>
                         </div>

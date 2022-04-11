@@ -4,7 +4,7 @@ import Button from '../Button/index';
 
 const First = () => {
     return (
-        <div className='first'>
+        <div className='first' id='main'>
             <div className='first__absolute' />
             <div className='container'>
                 <div className='first__header'>

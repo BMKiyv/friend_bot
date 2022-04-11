@@ -17,7 +17,7 @@ const About = () => {
                         return (
                             <div className='about__items-item' key={i}>
                                 <figure className='bg-ok'/>
-                                <p className='about__items-text bold'>{item}</p>
+                                <p className='about__items-text solid bold'>{item}</p>
                             </div>
 
                         )

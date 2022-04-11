@@ -98,14 +98,14 @@ const Processing = () => {
         return (
             <div className='process__items-item' key={item.title}>
                 <figure className={`${item.class} process__items-img`}/>
-                <p className='process__items-title'>{item.title}</p>
+                <p className='process__items-title solid bold'>{item.title}</p>
                 <p className='process__items-text'>{item.text}</p>
             </div>
         )
     }
 
     return (
-        <div className='container'>
+        <div className='container' id='howitwork'>
             <h3>Як працює</h3>
             <div className='process__carousel'>
                 <Carousel

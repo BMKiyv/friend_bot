@@ -27,9 +27,9 @@ const HowItWork = () => {
         }
     ]
     return (
-        <div className='container howitwork'>
-            <h2 className='howitwork__title'>Ми створили цю платформу, тому що для нас важливо піклуватися про всіх, хто постраждав 
-            від війни в Україні.</h2>
+        <div className='container howitwork' id='aboutbot'>
+            <h2 className='howitwork__title'>Ми створили цю платформу, тому що для нас важливо<span className='howitwork__title'> піклуватися про всіх, хто постраждав 
+            від війни в Україні.</span></h2>
             <div className='howitwork__content'>
                 <div className='howitwork__content-bigcard'>
                     <div className='howitwork__content-images'>
@@ -39,7 +39,7 @@ const HowItWork = () => {
                           )
                           })}
                     </div> 
-                    <p className='howitwork__content-text solid'>
+                    <p className='howitwork__content-text solid bold'>
                         Ця сторінка надає вам швидкий і прямий 
                         онлайн-доступ до чат-боту, що допоможе швидко впоратись із наслідками травматичної події.
                     </p>
@@ -52,11 +52,11 @@ const HowItWork = () => {
                 </div>
                 <div className='howitwork__content-card'>
                     <span className='bg-nurse' />
-                    <p className='howitwork__content-smalltext'>Також ми надаємо доступ до фахівців із психічного здоров’я, які витрачають час, щоб підтримати вас і ваші сім’ї в ці важкі часи.</p>
+                    <p className='howitwork__content-smalltext solid'>Також ми надаємо доступ до фахівців із психічного здоров’я, які витрачають час, щоб підтримати вас і ваші сім’ї в ці важкі часи.</p>
                 </div>
                 <div className='howitwork__content-card'>
                     <span className='bg-fingers' />
-                    <p className='howitwork__content-smalltext'>Незалежно від того, що відбувається зараз, важливо залишатися спокійним і сильним, наскільки це можливо. Ми тут, щоб допомогти вам зробити це.</p>
+                    <p className='howitwork__content-smalltext solid'>Незалежно від того, що відбувається зараз, важливо залишатися спокійним і сильним, наскільки це можливо. Ми тут, щоб допомогти вам зробити це.</p>
                 </div>
             </div>
         </div>

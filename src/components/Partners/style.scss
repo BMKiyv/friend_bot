@@ -1,18 +1,14 @@
 .partners{
     &__cards{
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: 17px;
         margin-top: 20px;
         margin-bottom: 90px;
         &-card{
             border: 1px solid #DADDE6;
             border-radius: 30px;
-            width: 250px;
             height: 212px;
-            box-sizing: border-box;
-            @media (max-width:1368px){
-                width:235px
-            }
         }
         &-img{
             position: relative;

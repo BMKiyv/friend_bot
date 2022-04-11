@@ -16,14 +16,8 @@
         grid-template-rows: 1fr 1fr;
         align-items: center;
         &-text{
-            width: 50%;
+            width: 66%;
             line-height: 24px;
-            &:first-child{
-                width: 64%;
-            }
-            &:last-child{
-                width: 64%;
-            }
         }
     }
     &__background{

@@ -96,17 +96,17 @@ const Team = () => {
                 <div className='team__items-img'>
                     <img src={item.src} alt={item.name} />
                 </div>
-                <p className='team__items-name'>{item.name}</p>
+                <p className='team__items-name solid bold'>{item.name}</p>
             </div>
         )
     }
 
     return (
-        <div className='container'>
+        <div className='container' id='team'>
             <h3 className='team__title'>Команда</h3>
             <div className='team__carousel'>
                 <Carousel
-                    statusFormatter={(current, total) => ` ${current} / ${total}`}
+                    //statusFormatter={(current, total) => ` ${current} / ${total}`}
                     {...carouselPropTeam()}>
                     {renderSpecialist()}
                 </Carousel>

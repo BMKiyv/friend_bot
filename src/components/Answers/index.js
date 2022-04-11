@@ -18,13 +18,13 @@ const Answers = () => {
         }   
     ]
     return (
-        <div className='container answers'>
+        <div className='container answers' id='faq'>
             <h3 className='answers__header'>Питання та відповідь</h3>
             <div className='answers__details'>
                 {answers.map((item,i)=>{
                     return (
                         <details className='answers__item' key={i}>
-                            <summary className='answers__question'>{item.question}</summary>
+                            <summary className='answers__question solid bold'>{item.question}</summary>
                             <p className='answers__answer'>{item.answer}</p>
                         </details>
                     )
