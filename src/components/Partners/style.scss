@@ -10,6 +10,9 @@
             width: 250px;
             height: 212px;
             box-sizing: border-box;
+            @media (max-width:1368px){
+                width:235px
+            }
         }
         &-img{
             position: relative;

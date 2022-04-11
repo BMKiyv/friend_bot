@@ -9,6 +9,9 @@ import Principles from './components/Principles';
 import Partners from './components/Partners';
 import About from './components/About';
 import Answers from './components/Answers';
+import Advisers from './components/Advisers';
+import Team from './components/Team';
+import Processing from './components/Processing';
 
 function App() {
   return (
@@ -18,10 +21,13 @@ function App() {
         <First />
         <Solution />
         <HowItWork />
+        <About />
+        <Processing />
         <Principles/>
         <Partners />
-        <About />
         <Answers />
+        <Team />
+        <Advisers />
         <Footer />
       </div>
       <Outlet />

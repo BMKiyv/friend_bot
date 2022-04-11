@@ -1,0 +1,41 @@
+.process{
+    &__carousel{
+        max-height: 320px;
+        margin-top: 30px;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        &-item{
+            position:relative;
+            background: var(--card-background);
+            border-radius: 30px;
+            width: 315px;
+            text-align: left;
+            padding: 30px 30px 40px 30px;
+            &:not(:last-child):after{
+                position: absolute;
+                top: 2px;
+                right:-15px;
+                content: url('../../img/arrow.png');
+            }
+            @media (max-width:1368px){
+                width: 293px;
+            }
+        }
+        &-title{
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 31px;
+        }
+        &-text{
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 7px;
+        }
+        &-img{
+            margin: 0;
+        }
+    }
+}

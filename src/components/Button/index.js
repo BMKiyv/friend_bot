@@ -8,19 +8,19 @@ import './style.scss';
 //import { URL_LANG } from '../../utils/constants';
 
 const Btn = ({
-    url, theme, title, onPress = () => {
+    url, theme,img, title, onPress = () => {
     }, full, nofollow = false,
 }) => {
 
     const renderBtn = () => {
-        const _rel = nofollow ? 'nofollow' : "";
 
         if (url) {
             if (url.indexOf("http") !== -1) {
                 return (
                     <a
-                        className = { `btn btn-${theme} ${full ? "btn-full" : ""}` } href = { url } rel = { _rel } target = '_blank'
+                        className = { `btn btn-${theme} ${full ? "btn-full" : ""}` } href = { url } rel = 'noreferrer' target = '_blank'
                         onClick = { onPress }>
+                        {img && <img className = 'btn-img' src = { img } alt = { theme } />}
                         <span className = 'btn_text'>{ title }</span>
                     </a>
                 );
@@ -29,6 +29,7 @@ const Btn = ({
             return (
                 <Link
                     className = { `btn btn-${theme} ${full ? "btn-full" : ""}` } to = { url } onClick = { onPress }>
+                    {img && <img className = 'btn-img' src = { img } alt = { theme } />}
                     <span className = 'btn_text'>{ title }</span>
                 </Link>
             );
@@ -54,6 +55,7 @@ Btn.propTypes = {
     onPress:  PropTypes.func,
     width:    PropTypes.string,
     nofollow: PropTypes.bool,
+    img:      PropTypes.string
 };
 
 export default Btn;

@@ -16,6 +16,7 @@ const First = () => {
                         url = 'https://google.com'
                         theme='main'
                         title='Почати спілкування'
+                        img='/images/tgwhite.png'
                     />
                     <Button 
                         url = 'https://bing.com'

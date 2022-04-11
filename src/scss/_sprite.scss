@@ -200,40 +200,45 @@
     width: 24px;
     display: inline-block;
     height: 24px;
-    background: url('../img/css_sprites2.png') -0 -0;
+    background: url('../img/css_sprites2.png') -127px -100px;
 }
 
 .bg-smile8 {
     width: 23px; 
     display: inline-block;
     height: 23px;
-    background: url('../img/css_sprites2.png') -0 -24px;
+    background: url('../img/css_sprites2.png') -127px -124px;
 }
 
 .bg-smile9 {
     width: 23px; 
     display: inline-block;
     height: 23px;
-    background: url('../img/css_sprites2.png') -23px -24px;
+    background: url('../img/css_sprites2.png') -150px -124px;
 }
 
 .bg-smile10 {
     width: 23px; 
     display: inline-block;
     height: 24px;
-    background: url('../img/css_sprites2.png') -24px -0;
+    background: url('../img/css_sprites2.png') -151px -100px;
 }
 
 .bg-nimb {
     width: 54px; 
     display: inline-block;
-    height: 54px;
-    background: url('../img/nimb.png') 0px 0px;
+    height: 50px;
+    background: url('../img/css_sprites2.png') -127px -0;
 }
 
 .bg-silence {
-    width: 54px; 
+    width: 50px; 
     display: inline-block;
-    height: 54px;
-    background: url('../img/silence.png') 0px 0px;
+    height: 50px;
+    background: url('../img/css_sprites2.png') -127px -50px;
+}
+
+.bg-bot_footer {
+    width: 127px; height: 160px;
+    background: url('../img/css_sprites2.png') -0 -0;
 }

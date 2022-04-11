@@ -37,22 +37,25 @@ h1{
 }
 
 h2{
-  font-weight: 500;
+  font-weight: 600;
   font-size: 38px;
   line-height: 54px;
   color: var(--main-color);
 }
 
 h3{
-  font-weight: 500;
+  font-weight: 600;
   font-size: 32px;
   line-height: 54px;
   color: var(--main-color);
 }
 
 .container{
-  max-width: calc(100% - 120px);
+  max-width: 1320px;
   margin: 0 auto;
+  @media (max-width:1420px){
+    max-width: calc(100% - 120px);
+  }
 }
 
 .solid{

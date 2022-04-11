@@ -5,8 +5,7 @@
     grid-template-areas:
         'h b'
         'i b';
-    margin-top: 116px;
-    margin-bottom: 70px;
+
     &__header{
         grid-area: h;
     }
@@ -15,7 +14,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        align-items: end;
+        align-items: center;
         &-text{
             width: 50%;
             line-height: 24px;
@@ -34,5 +33,9 @@
         border-radius: 30px;
         background-image: url('../../img/aboutback.png');
         grid-area: b;
+    }
+    &-wrap{
+        margin-top: 116px;
+        margin-bottom: 70px;
     }
 }

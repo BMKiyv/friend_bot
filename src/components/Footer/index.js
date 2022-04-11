@@ -4,8 +4,11 @@ import Navigation from '../Navigation';
 
 const Footer = () => {
     return (
-        <footer className='container'>
-            <Navigation />
+        <footer className='container footer'>
+            <div className='bg-bot_footer'/>
+            <div className='footer__nav'>
+                <Navigation />
+            </div>
         </footer>
     )
 }

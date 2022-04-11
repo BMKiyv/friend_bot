@@ -15,11 +15,15 @@
             &:nth-child(2n){
                 margin-right: 0;
             }
+            @media (max-width:1368px){
+                width: 608px;
+            }
         }
         &-mean{
             display: flex;
             flex-direction: column;
             margin-left: 5px;
+            width: 64%;
         }
         &-header{
             font-size: 18px;

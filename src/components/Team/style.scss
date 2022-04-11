@@ -1,0 +1,32 @@
+.team{
+    &__title{
+        text-align: center;
+    }
+    &__carousel{
+        margin-top: 37px;
+        margin-bottom: 90px;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+        &-item{
+            width: 310px;
+            background: var(--card-background);
+            border-radius: 30px;
+            padding: 40px;
+            @media (max-width:1368px){
+                width: 300px;
+            }
+        }
+        &-img{
+            width: 120px;
+            margin: 0 auto;
+        }
+        &-name{
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 28px;
+            margin-top: 20px;
+        }
+    }
+}

@@ -9,7 +9,7 @@ const About = () => {
         'Джерело достовірної інформації'
     ]
     return (
-        <div className='container'>
+        <div className='container about-wrap'>
             <div className='about'>
                 <h3 className='about__header bold'>Ваш друг (чатбот) - це</h3>
                 <div className='about__items'>

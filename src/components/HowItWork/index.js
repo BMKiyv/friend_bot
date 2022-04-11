@@ -47,6 +47,7 @@ const HowItWork = () => {
                         url = 'https://google.com'
                         theme='main'
                         title='Почати спілкування'
+                        img='/images/tgwhite.png'
                     />
                 </div>
                 <div className='howitwork__content-card'>
