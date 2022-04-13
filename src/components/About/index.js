@@ -11,12 +11,12 @@ const About = () => {
     return (
         <div className='container about-wrap'>
             <div className='about'>
-                <h3 className='about__header bold'>Ваш друг (чатбот) - це</h3>
+                <h3 className='about__header'>Ваш друг (чатбот) - це</h3>
                 <div className='about__items'>
                     {items.map((item,i)=>{
                         return (
                             <div className='about__items-item' key={i}>
-                                <figure className='bg-ok'/>
+                                <img src='/images/ok.svg' alt='ok'/>
                                 <p className='about__items-text solid bold'>{item}</p>
                             </div>
 

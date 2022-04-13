@@ -7,23 +7,23 @@ const HowItWork = () => {
     const messages = [
         {
             text: 'Мені потрібна підтрімка',
-            className: 'bg-smile7'
+            className: '/images/smile7.svg'
         },
         {
             text: 'Чудово',
-            className: 'bg-smile8'
+            className: '/images/smile9.svg'
         },
         {
             text: 'Так собі',
-            className: 'bg-smile9'
+            className: '/images/smile8.svg'
         },
         {
             text: 'Я впораюсь',
-            className: 'bg-smile8'
+            className: '/images/smile9.svg'
         },
         {
             text: 'Так собі',
-            className: 'bg-smile10'
+            className: '/images/smile10.svg'
         }
     ]
     return (
@@ -35,7 +35,7 @@ const HowItWork = () => {
                     <div className='howitwork__content-images'>
                        { messages.map((item,i) => {
                           return (
-                            <p key={i} className='howitwork__content-image'>{item.text}<span className={item.className}/></p>
+                            <p key={i} className='howitwork__content-image'>{item.text}<span><img src={item.className} alt={item.text}/></span></p>
                           )
                           })}
                     </div> 
@@ -51,11 +51,11 @@ const HowItWork = () => {
                     />
                 </div>
                 <div className='howitwork__content-card'>
-                    <span className='bg-nurse' />
+                    <span><img src='/images/nurse.svg' alt='nurse'/></span>
                     <p className='howitwork__content-smalltext solid'>Також ми надаємо доступ до фахівців із психічного здоров’я, які витрачають час, щоб підтримати вас і ваші сім’ї в ці важкі часи.</p>
                 </div>
                 <div className='howitwork__content-card'>
-                    <span className='bg-fingers' />
+                <span><img src='/images/fingers.svg' alt='nurse'/></span>
                     <p className='howitwork__content-smalltext solid'>Незалежно від того, що відбувається зараз, важливо залишатися спокійним і сильним, наскільки це можливо. Ми тут, щоб допомогти вам зробити це.</p>
                 </div>
             </div>

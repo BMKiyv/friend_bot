@@ -4,22 +4,22 @@ import './style.scss';
 const Solution = () => {
     const cardData = [
         {
-            class: 'bg-heart',
+            class: '/images/heart.svg',
             description: 'Перша психологічна допомога'
         },
         {
-            class: 'bg-bot ',
+            class: '/images/bot.svg',
             description: 'Автоматизований співрозмовник (чатбот)'
         },  {
-            class: 'bg-brain',
+            class: '/images/brain.svg',
             description: 'Заснований на когнітивно-поведінковій терапії'
         },
         {
-            class: 'bg-dialog',
+            class: '/images/messages.png',
             description: 'Щоденні короткі діалоги'
         },
                 {
-            class: 'bg-logotelegram',
+            class: '/images/telegram.svg',
             description: 'Завжди під рукою (месенджер, додаток)'
         }
     ]
@@ -31,7 +31,7 @@ const Solution = () => {
                     return (
                         <div className='solution__card' key = {i}>
                             <div className='solution__card-img'>
-                                <figure className={item.class}/>
+                                <img src={item.class} alt={item.description}/>
                             </div>
                             <figcaption className='solution__card-text'>{item.description}</figcaption>
                         </div>

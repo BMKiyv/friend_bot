@@ -5,16 +5,32 @@
         grid-column-gap: 17px;
         margin-top: 20px;
         margin-bottom: 90px;
+        @media (max-width:1024px){
+            margin-top: 14px;
+            margin-bottom: 65px;
+            grid-column-gap: 14px;
+        }
         &-card{
             border: 1px solid #DADDE6;
             border-radius: 30px;
             height: 212px;
+            @media (max-width:1024px){
+                height: 150px;
+                border-radius: 22px;
+            }
         }
         &-img{
+            display: inline-block;
+            min-height: 57px;
+            max-width: 151px;
             position: relative;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            & img{
+                max-width: 100%;
+                width: 100%;
+            }
         }
     }
 }

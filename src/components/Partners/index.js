@@ -35,9 +35,11 @@ const Partners = () => {
             <div className='partners__cards'>
                 {partners.map((item,i)=>{
                     return (
-                        <a className='partners__cards-card' href={item.href} key={i}>
-                            <img className='partners__cards-img' src={item.src} alt={item.alt} />
-                        </a>
+                        <div className='partners__cards-card'  key={i}>
+                            <a  className='partners__cards-img' href={item.href} >
+                                <img  src={item.src} alt={item.alt} />
+                            </a>
+                        </div>
                     )
                 })}
             </div>

@@ -5,7 +5,9 @@
     grid-template-areas:
         'h b'
         'i b';
-
+    @media (max-width:1024px){
+        grid-template-rows: 40px 260px;
+    }
     &__header{
         grid-area: h;
     }
@@ -18,7 +20,17 @@
         &-text{
             width: 66%;
             line-height: 24px;
+            @media (max-width:1024px){
+                font-size: 13px;
+                line-height: 20px;
+            }
         }
+                    &-item img{
+                 @media (max-width:1024px){
+                width:30px;
+                 }
+            }
+
     }
     &__background{
         background-size: contain;
@@ -27,9 +39,16 @@
         border-radius: 30px;
         background-image: url('../../img/aboutback.png');
         grid-area: b;
+        @media (max-width:1024px){
+            border-radius: 22px;
+        }
     }
     &-wrap{
         margin-top: 116px;
         margin-bottom: 70px;
+        @media (max-width:1024px){
+            margin-top: 85px;
+            margin-bottom: 42px;
+        }
     }
 }

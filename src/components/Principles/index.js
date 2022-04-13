@@ -6,32 +6,32 @@ const Principles = () => {
         {
             header: 'Допомога абсолютно безкоштовна',
             text: 'Ми не переслідуємо фінансові цілі',
-            className: 'bg-palms'
+            className: '/images/palms.svg'
         },
         {
             header: 'Висококваліфіковані спеціалісти',
             text: 'Кваліфікація кожного спеціаліста перевіряється та підтверджується',
-            className: 'bg-doctor'
+            className: '/images/doctor.svg'
         },
         {
             header: 'Зручний і швидкий доступ + мінімум зусиль',
             text: 'Швидка реєстрація та оперативний підбір фахівця',
-            className: 'bg-fingers50'
+            className: '/images/fingers.svg'
         },
         {
             header: 'Універсальність',
             text: 'Можливість знайти терапевта, який володіє вашою мовою',
-            className: 'bg-mess54'
+            className: '/images/message.svg'
         },
         {
             header: 'Індивідуальний підхід',
             text: 'Можливість вибрати зручний спосіб спілкування, зручний час для консультації',
-            className: 'bg-nimb'
+            className: '/images/smile3.svg'
         },
         {
             header: 'Захист персональних даних',
             text: 'Жорстка політика конфіденційності, вся інформація надійно захищена',
-            className: 'bg-silence'
+            className: '/images/smile2.svg'
         }
     ]
     return (
@@ -41,7 +41,7 @@ const Principles = () => {
                 {principles.map((item,i)=>{
                     return (
                         <div className='principles__content-item' key={i}>
-                            <figure className={item.className}/>
+                            <img src={item.className} alt={item.header}/>
                             <div className='principles__content-mean'>
                                 <p className='principles__content-header solid bold'>{item.header}</p>
                                 <p className='principles__content-text'>{item.text}</p>

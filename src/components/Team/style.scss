@@ -5,6 +5,10 @@
     &__carousel{
         margin-top: 37px;
         margin-bottom: 90px;
+         @media (max-width:1024px){
+            margin-top: 26px;
+            margin-bottom: 64px;
+         }
     }
     &__items{
         display: grid;
@@ -14,16 +18,27 @@
             background: var(--card-background);
             border-radius: 30px;
             padding: 40px;
+             @media (max-width:1024px){
+                padding: 29px;
+                border-radius: 22px;
+             }
         }
         &-img{
             width: 120px;
             margin: 0 auto;
+            @media (max-width:1024px){
+                width: 85px;
+                }
         }
         &-name{
             font-weight: bold;
             font-size: 22px;
             line-height: 28px;
             margin-top: 20px;
+            @media (max-width:1024px){
+                font-size: 16px;
+                line-height: 20px;
+            }
         }
     }
 }

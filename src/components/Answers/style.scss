@@ -5,10 +5,17 @@
     &__details{
         margin-top: 30px;
         margin-bottom: 78px;
+        @media (max-width:1024px){
+            margin-top: 26px;
+            margin-bottom: 50px;
+            }
     }
     &__item{
         margin: 0 auto;
         width: 800px;
+        @media (max-width:1024px){
+            width: 570px;
+        }
         &[open] > .answers__answer{
             width: 100%;
             background: var(--card-background);
@@ -16,6 +23,10 @@
             margin-top: -7px;
             margin-bottom: 10px;
             padding: 30px 40px;
+            @media (max-width:1024px){
+                padding: 18px 30px;
+                border-radius: 0 0 22px 22px;
+            }
         }
         &[open] > .answers__question{
             border-radius: 30px 30px 0 0;
@@ -31,6 +42,14 @@
                 width: 3px;
                 height: 23px;
                 transform: rotate(90deg);
+                @media (max-width:1024px){
+                    height: 16px;
+                    top: 26px;
+                    right: 38px;
+                }
+            }
+            @media (max-width:1024px){
+                border-radius: 22px 22px 0 0;
             }
         }
     }
@@ -44,6 +63,10 @@
         margin-bottom: 10px;
         list-style: none;
         cursor: pointer;
+         @media (max-width:1024px){
+            padding: 22px 30px;
+            border-radius: 22px;
+         }
         &:after{
             position: absolute;
             content: '';
@@ -53,6 +76,11 @@
             width: 3px;
             height: 23px;
             transform: rotate(90deg);
+            @media (max-width:1024px){
+                height: 16px;
+                top: 26px;
+                right: 38px;
+            }
         }
         &:before{
             position: absolute;
@@ -62,6 +90,11 @@
             background: #386CC5;
             width: 3px;
             height: 23px;
+            @media (max-width:1024px){
+                height: 16px;
+                 top: 26px;
+                 right: 38px;
+            }
         }
     }
 }

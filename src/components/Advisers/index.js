@@ -46,7 +46,7 @@ const Advisers = () => {
                 {advisers.map((item,i)=>{
                     return item.shortDescription?
                     <div className='advisers__list-item' key={i}>
-                        <img className='advisers__list' src={item.src} alt={item.name}/>
+                        <img src={item.src} alt={item.name}/>
                         <p className='advisers__list-title solid bold'>{item.name}</p>
                         <p className='advisers__list-shortdescription'>{item.shortDescription}</p>
                         <p className='advisers__list-description' style={{'display':'none'}}>{item.description}</p>

@@ -6,22 +6,22 @@ import { carouselPropTeam } from '../../utils/constants';
 
 const processing = [
     {
-        class: 'bg-smile4',
+        class: '/images/smile4.svg',
         title: 'Тривожний стан',
         text: 'Автоматизований співрозмовник (чатбот)'
     },
     {
-        class: 'bg-mess54',
+        class: '/images/message.svg',
         title: 'Діалог з “Другом”',
         text: 'Автоматизований співрозмовник (чатбот)'
     },
     {
-        class: 'bg-book',
+        class: '/images/book.svg',
         title: 'Набір вправ',
         text: 'Автоматизований співрозмовник (чатбот)'
     },
     {
-        class: 'bg-smile5',
+        class: '/images/smile5.svg',
         title: 'Покращення стану',
         text: 'Автоматизований співрозмовник (чатбот)'
     }
@@ -64,7 +64,7 @@ const Processing = () => {
                 }
             }
 
-            else if (width > 1023) {
+            else if (width > 768) {
                 if (countElements < 4) {
                     countElements += 1;
                 } else {
@@ -97,7 +97,9 @@ const Processing = () => {
     const renderingCard = (item) => {
         return (
             <div className='process__items-item' key={item.title}>
-                <figure className={`${item.class} process__items-img`}/>
+                <div className='process__items-img'>
+                    <img  src={item.class} alt={item.title}/>
+                </div>
                 <p className='process__items-title solid bold'>{item.title}</p>
                 <p className='process__items-text'>{item.text}</p>
             </div>

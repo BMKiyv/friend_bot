@@ -5,14 +5,27 @@
         grid-column-gap: 12px;
         margin-top: 30px;
         margin-bottom: 54px;
+         @media (max-width:1024px){
+            margin-top: 20px;
+            margin-bottom: 38px;
+         }
         &-item{
             display: flex;
             background: var(--card-background);
             border-radius: 20px;
             margin-bottom: 12px;
-            padding: 15px 0 25px;
-            @media (max-width:1368px){
-                width: 608px;
+            padding: 15px 30px 25px;
+            @media (max-width:1024px){
+                padding: 15px 21px 25px;
+            }
+            & img{
+                width: 44px;
+                display: inline-block;
+                margin-right: 15px;
+                object-fit: contain;
+                @media (max-width:1024px){
+                    width: 36px;
+                }
             }
         }
         &-mean{
@@ -25,10 +38,18 @@
             font-size: 18px;
             line-height: 28px;
             padding: 10px 0 3px;
+             @media (max-width:1024px){
+                font-size: 13px;
+                line-height: 20px;
+             }
         }
         &-text{
             font-size: 16px;
             line-height: 24px;
+            @media (max-width:1024px){
+                font-size: 11px;
+                line-height: 19px;
+            }
         }
     }
     
