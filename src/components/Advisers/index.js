@@ -63,6 +63,7 @@ const Advisers = () => {
                     <div  className='advisers__list-lastitem' key={i}>
                         <p className='advisers__list-lasttext'>{item.name}</p>
                         <Btn 
+                            full
                             url={item.src}
                             title='Почати спілкування'
                             theme = 'second'

@@ -28,8 +28,9 @@ const HowItWork = () => {
     ]
     return (
         <div className='container howitwork' id='aboutbot'>
-            <h2 className='howitwork__title'>Ми створили цю платформу, тому що для нас важливо<span className='howitwork__title'> піклуватися про всіх, хто постраждав 
-            від війни в Україні.</span></h2>
+            {/* <h2 className='howitwork__title'>Ми створили цю платформу, тому що для нас важливо<span className='howitwork__title'> піклуватися про всіх, хто постраждав 
+            від війни в Україні.</span></h2> */}
+            <h2 className='howitwork__title'>Ми створили цю платформу, тому що для нас важливо піклуватися про всіх, хто постраждав від війни в Україні.</h2>
             <div className='howitwork__content'>
                 <div className='howitwork__content-bigcard'>
                     <div className='howitwork__content-images'>
@@ -51,11 +52,11 @@ const HowItWork = () => {
                     />
                 </div>
                 <div className='howitwork__content-card'>
-                    <span><img src='/images/nurse.svg' alt='nurse'/></span>
+                    <span><img className='howitwork__content-img' src='/images/nurse.svg' alt='nurse'/></span>
                     <p className='howitwork__content-smalltext solid'>Також ми надаємо доступ до фахівців із психічного здоров’я, які витрачають час, щоб підтримати вас і ваші сім’ї в ці важкі часи.</p>
                 </div>
                 <div className='howitwork__content-card'>
-                <span><img src='/images/fingers.svg' alt='nurse'/></span>
+                <span><img className='howitwork__content-img' src='/images/fingers.svg' alt='nurse'/></span>
                     <p className='howitwork__content-smalltext solid'>Незалежно від того, що відбувається зараз, важливо залишатися спокійним і сильним, наскільки це можливо. Ми тут, щоб допомогти вам зробити це.</p>
                 </div>
             </div>

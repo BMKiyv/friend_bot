@@ -14,7 +14,7 @@
   color: var(--second-color);
   letter-spacing: -0.01em;
   background: var(--white);
-  @media (max-width:1024px){
+  @media (min-width:1024px) and (max-width:1240px){
     font-size: 14px;
     line-height: 20px;
   }
@@ -38,8 +38,12 @@ h1{
   line-height: 59px;
   text-align: left;
   color: var(--main-color);
-  @media (max-width:1024px){
+  @media (min-width:768px) and (max-width:1240px){
     font-size: 30px;
+    line-height: 38px;
+  }
+  @media (min-width:320px) and (max-width:767px){
+    font-size: 28px;
     line-height: 38px;
   }
 }
@@ -49,6 +53,14 @@ h2{
   font-size: 38px;
   line-height: 54px;
   color: var(--main-color);
+   @media (min-width:768px) and (max-width:1240px){
+    font-size: 26px;
+    line-height: 36px;
+   }
+   @media (min-width:320px) and (max-width:767px){
+    font-size: 26px;
+    line-height: 38px;
+     }
 }
 
 h3{
@@ -56,9 +68,13 @@ h3{
   font-size: 32px;
   line-height: 54px;
   color: var(--main-color);
-  @media (max-width:1024px){
+  @media (min-width:768px) and (max-width:1240px){
     font-size: 22px;
     line-height: 38px;
+  }
+  @media (min-width:320px) and (max-width:767px){
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 
@@ -70,6 +86,18 @@ h3{
   }
   @media (min-width:1024px) and (max-width:1240px){
     max-width: calc(100% - 80px);
+  }
+  @media (min-width:768px) and (max-width:1023px){
+    max-width: calc(100% - 80px);
+  }
+  @media (min-width:320px) and (max-width:767px){
+    max-width: calc(100% - 30px);
+  }
+}
+
+.container.advisers#advisers{
+  @media (min-width:320px) and (max-width:767px){
+    max-width: 100%;
   }
 }
 

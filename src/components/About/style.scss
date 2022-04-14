@@ -5,8 +5,26 @@
     grid-template-areas:
         'h b'
         'i b';
-    @media (max-width:1024px){
+    @media (min-width:1024px) and (max-width:1240px){
         grid-template-rows: 40px 260px;
+    }
+    @media (min-width:768px) and (max-width:1023px){
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 120px 300px;
+        grid-template-areas:
+        'h'
+        'i'
+        'b';
+    }
+    @media (min-width:320px) and (max-width:767px){
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 230px 200px;
+        grid-template-areas:
+            'h'
+            'b'
+            'i';
     }
     &__header{
         grid-area: h;
@@ -17,16 +35,46 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         align-items: center;
+         @media (min-width:768px) and (max-width:1023px){
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+        }
+             @media (min-width:320px) and (max-width:767px){
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                align-items: center;
+        }
+        &-item{
+            @media (min-width:320px) and (max-width:767px){
+                display: flex;
+                    align-items: center;
+            }
+            & img{
+                @media (min-width:320px) and (max-width:767px){
+                    width: 32px;
+                    margin-right: 10px;
+                }
+            }
+        }
         &-text{
             width: 66%;
             line-height: 24px;
-            @media (max-width:1024px){
+            @media (min-width:768px) and (max-width:1240px){
                 font-size: 13px;
                 line-height: 20px;
             }
+            @media (min-width:768px) and (max-width:1023px){
+                width:75%;            
+            }
+            @media (min-width:320px) and (max-width:767px){
+                width: 100%;
+                line-height: 24px;
+                font-size: 16px;
+            }
         }
                     &-item img{
-                 @media (max-width:1024px){
+                 @media (min-width:768px) and (max-width:1240px){
                 width:30px;
                  }
             }
@@ -39,16 +87,26 @@
         border-radius: 30px;
         background-image: url('../../img/aboutback.png');
         grid-area: b;
-        @media (max-width:1024px){
+        @media (min-width:1024px) and (max-width:1240px){
             border-radius: 22px;
+        }
+        @media (min-width:768px) and (max-width:1023px){
+            border-radius: 22px;
+            background-color: var(--card-background);
+            background-position: center;
+            width: 100%;
         }
     }
     &-wrap{
         margin-top: 116px;
         margin-bottom: 70px;
-        @media (max-width:1024px){
+        @media (min-width:1024px) and (max-width:1240px){
             margin-top: 85px;
             margin-bottom: 42px;
+        }
+        @media (min-width:320px) and (max-width:767px){
+            margin-top: 60px;
+            margin-bottom: 48px;
         }
     }
 }

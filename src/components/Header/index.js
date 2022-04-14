@@ -23,7 +23,6 @@ const Header = () => {
                 <img src='/images/headlogo.png' alt='logo' />
             </div>
             <div className={mobileNav ? 'header__mobile' : 'header__pad'}>
-                {console.log(mobileNav)}
                 <div className={mobileNav ? 'container header__wrap': 'container header__pad'}>
 
                     <div>

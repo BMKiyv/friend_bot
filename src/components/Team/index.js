@@ -48,7 +48,7 @@ const Team = () => {
         let countElements = 0;
 
         for (const item of team) {
-            if (width < 1023) {
+            if (width < 768) {
                 groupArrSpec[countArrays].push(renderingCard(item));
                 if (countArrays < team.length - 1) {
                     countArrays += 1;
@@ -60,7 +60,7 @@ const Team = () => {
                 }
             }
 
-            else if (width > 1023) {
+            else if (width > 767) {
                 if (countElements < 4) {
                     countElements += 1;
                 } else {

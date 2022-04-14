@@ -1,6 +1,9 @@
 .footer{
     display: flex;
     justify-content: space-between;
+    @media (min-width:320px) and (max-width:767px){
+        display:none;
+    }
     &__nav{
         padding: 0 0 30px 0;
         display: flex;

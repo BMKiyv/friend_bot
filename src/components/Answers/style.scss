@@ -5,7 +5,7 @@
     &__details{
         margin-top: 30px;
         margin-bottom: 78px;
-        @media (max-width:1024px){
+        @media (min-width:1024px) and (max-width:1240px){
             margin-top: 26px;
             margin-bottom: 50px;
             }
@@ -13,8 +13,17 @@
     &__item{
         margin: 0 auto;
         width: 800px;
-        @media (max-width:1024px){
+        @media (min-width:1024px) and (max-width:1240px){
             width: 570px;
+            margin: 0;
+        }
+        @media (min-width:768px) and (max-width:1023px){
+            width: 600px;
+            margin: 0;
+        }
+        @media (min-width:320px) and (max-width:767px){
+            width: 300px;
+             margin: 0;
         }
         &[open] > .answers__answer{
             width: 100%;
@@ -23,9 +32,14 @@
             margin-top: -7px;
             margin-bottom: 10px;
             padding: 30px 40px;
-            @media (max-width:1024px){
+            @media (min-width:1024px) and (max-width:1240px){
                 padding: 18px 30px;
                 border-radius: 0 0 22px 22px;
+            }
+            @media (min-width:320px) and (max-width:767px){
+                padding: 25px 25px;
+                font-size: 16px;
+                line-height: 24px;
             }
         }
         &[open] > .answers__question{
@@ -42,13 +56,13 @@
                 width: 3px;
                 height: 23px;
                 transform: rotate(90deg);
-                @media (max-width:1024px){
+                @media (min-width:1024px) and (max-width:1240px){
                     height: 16px;
                     top: 26px;
                     right: 38px;
                 }
             }
-            @media (max-width:1024px){
+            @media (min-width:1024px) and (max-width:1240px){
                 border-radius: 22px 22px 0 0;
             }
         }
@@ -63,9 +77,20 @@
         margin-bottom: 10px;
         list-style: none;
         cursor: pointer;
-         @media (max-width:1024px){
+         @media (min-width:768px) and (max-width:1240px){
             padding: 22px 30px;
             border-radius: 22px;
+         }
+         @media (min-width:320px) and (max-width:767px){
+            padding: 25px;
+         }
+         & span{
+            @media (min-width:320px) and (max-width:767px){
+                width: 80%;
+                display: inline-block;
+                font-size: 16px;
+                line-height: 24px;
+                }
          }
         &:after{
             position: absolute;
@@ -76,7 +101,7 @@
             width: 3px;
             height: 23px;
             transform: rotate(90deg);
-            @media (max-width:1024px){
+            @media (min-width:1024px) and (max-width:1240px){
                 height: 16px;
                 top: 26px;
                 right: 38px;
@@ -90,7 +115,7 @@
             background: #386CC5;
             width: 3px;
             height: 23px;
-            @media (max-width:1024px){
+            @media (min-width:1024px) and (max-width:1240px){
                 height: 16px;
                  top: 26px;
                  right: 38px;

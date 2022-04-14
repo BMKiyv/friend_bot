@@ -8,7 +8,7 @@ const First = () => {
             <div className='first__absolute' />
             <div className='container'>
                 <div className='first__header'>
-                    <h1> Підтримка <span role="img" className='bg-pray'></span> психічного здоров'я людей <span role="img" className='bg-flag'></span> які постраждали від війни</h1>
+                    <h1> Підтримка <span role="img" className='bg-pray'></span> психічного здоров'я людей які постраждали від війни в Україні <span role="img" className='bg-flag'></span></h1>
                 </div>
                 <p className='first__header-text'>Ми безкоштовно допоможемо всім, хто потребує підтримки</p>
                 <div className='first__header-button'>

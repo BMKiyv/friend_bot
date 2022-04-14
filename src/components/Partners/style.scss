@@ -5,18 +5,42 @@
         grid-column-gap: 17px;
         margin-top: 20px;
         margin-bottom: 90px;
-        @media (max-width:1024px){
+        @media (min-width:1024px) and (max-width:1240px){
             margin-top: 14px;
             margin-bottom: 65px;
             grid-column-gap: 14px;
         }
+         @media (min-width:768px) and (max-width:1023px){
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            flex: 1 1 auto;
+            grid-column-gap: 0px;
+         }
+         @media (min-width:320px) and (max-width:767px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 15px;
+            grid-row-gap: 15px;
+            margin-top: 20px;
+         }
         &-card{
             border: 1px solid #DADDE6;
             border-radius: 30px;
             height: 212px;
-            @media (max-width:1024px){
+            @media (min-width:1024px) and (max-width:1240px){
                 height: 150px;
                 border-radius: 22px;
+            }
+            @media (min-width:768px) and (max-width:1023px){
+                border-radius: 22px;
+                height: 128px;
+                margin-right: 14px;
+                margin-bottom: 14px;
+                padding: 29px;
+            }
+            @media (min-width:320px) and (max-width:767px){
+                height: 140px;
             }
         }
         &-img{
@@ -30,6 +54,10 @@
             & img{
                 max-width: 100%;
                 width: 100%;
+            }
+            @media (min-width:320px) and (max-width:767px){
+                max-width: 140px;
+                max-height: 80px;
             }
         }
     }

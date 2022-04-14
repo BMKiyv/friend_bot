@@ -2,22 +2,60 @@
     width: 100%;
     height:580px;
     background: linear-gradient(122.22deg, #F1F5FF 35.7%, #C4D3FF 93.05%);
-    @media (max-width:1024px){
+    @media (min-width:1024px) and (max-width:1240px){
         height:355px;
     }
+    @media (min-width:768px) and (max-width:1024px){
+        height:425px;
+        }
+        @media (min-width:320px) and (max-width:767px){
+            width: 100%;
+            height: 775px;
+            background: linear-gradient(120.94deg, #FCF1FF 5.18%, #C4D3FF 90.58%);
+            }
     &__header{
         width: 50%;
         padding-top: 140px;
-         @media (max-width:1024px){
+        @media (min-width:1024px) and (max-width:1240px){
             padding-top: 45px;
+         }
+        @media (min-width:768px) and (max-width:1023px){
+            padding-top: 25px;
+         }
+         @media (min-width:320px) and (max-width:767px){
+            padding-top: 25px;
+            width: 100%;
          }
         &-text{
             width: 400px;
             padding: 8px 0 20px 0;
-            @media (max-width:1024px){
+            @media (min-width:1024px) and (max-width:1240px){
                 font-size: 14px;
                 line-height: 20px;
                 width: 235px;
+            }
+            @media (min-width:768px) and (max-width:1023px){
+                    width:230px;
+                font-size: 14px;
+                line-height: 20px;
+                }
+                @media (min-width:320px) and (max-width:767px){
+                    width: 100%;
+                    }
+        }
+        &-button{
+            @media (min-width:768px) and (max-width:1023px){
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 94px;
+                align-items: flex-start;
+            }
+            @media (min-width:320px) and (max-width:767px){
+                display: flex;
+                flex-direction: column;
+                height: 120px;
+                justify-content: space-between;
             }
         }
     }
@@ -30,12 +68,30 @@
         top: 80px;
         background-repeat: no-repeat;
         background-position: 454px 67px,left,525px 215px;
-        @media (max-width:1024px){
+        @media (min-width:1024px) and (max-width:1240px){
             height: 363px;
             background-size: 32%,70%,22%;
             background-position: 337px 40px,left,380px 148px;
             width: 52%;
         }
+        @media (min-width:768px) and (max-width:1023px){
+            background-image:url('../../img/firstphone.png');
+            width: 56%;
+            background-position: 40px;
+            background-size: 79%;
+            height: 525px;
+            }
+             @media (min-width:320px) and (max-width:767px){
+                height: 1190px;
+                position: absolute;
+                background-image: url('../../img/firstphone.png');
+                width: 100%;
+                right: 0;
+                top: 80px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+             }
                     
     }
 }

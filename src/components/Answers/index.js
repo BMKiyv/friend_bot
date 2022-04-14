@@ -24,7 +24,7 @@ const Answers = () => {
                 {answers.map((item,i)=>{
                     return (
                         <details className='answers__item' key={i}>
-                            <summary className='answers__question solid bold'>{item.question}</summary>
+                            <summary className='answers__question solid bold'><span>{item.question}</span></summary>
                             <p className='answers__answer'>{item.answer}</p>
                         </details>
                     )

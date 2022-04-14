@@ -52,7 +52,7 @@ const Processing = () => {
         let countElements = 0;
 
         for (const item of processing) {
-            if (width < 1023) {
+            if (width < 768) {
                 groupArrSpec[countArrays].push(renderingCard(item));
                 if (countArrays < processing.length - 1) {
                     countArrays += 1;
@@ -64,7 +64,7 @@ const Processing = () => {
                 }
             }
 
-            else if (width > 768) {
+            else if (width > 767) {
                 if (countElements < 4) {
                     countElements += 1;
                 } else {
