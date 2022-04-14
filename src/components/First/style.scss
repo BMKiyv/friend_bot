@@ -15,9 +15,9 @@
 
     @media (min-width:320px) and (max-width:767px) {
         width: 100%;
-        height: 783px;
+        height: 830px;
         background: linear-gradient(120.94deg, #FCF1FF 5.18%, #C4D3FF 90.58%);
-        margin-bottom: 87px;
+        margin-bottom: 30px;
         position: relative;
     }
 
@@ -105,12 +105,12 @@
         }
 
         @media (min-width:320px) and (max-width:767px) {
-            height: 100%;
+            height: 45%;
             position: absolute;
             background-image: url('../../img/firstmobile.png');
             width: 100%;
             right: 0;
-            top: 0px;
+            top: 55%;
             background-repeat: no-repeat;
             background-position: bottom;
             //background-size: 100%;

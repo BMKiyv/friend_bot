@@ -102,7 +102,7 @@ const Team = () => {
     }
 
     return (
-        <div className='container' id='team'>
+        <div className='container team' id='team'>
             <h3 className='team__title'>Команда</h3>
             <div className='team__carousel'>
                 <Carousel

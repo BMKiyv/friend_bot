@@ -107,8 +107,8 @@ const Processing = () => {
     }
 
     return (
-        <div className='container' id='howitwork'>
-            <h3>Як працює</h3>
+        <div className='container process' id='howitwork'>
+            <h3 className='process__header'>Як працює</h3>
             <div className='process__carousel'>
                 <Carousel
                     statusFormatter={(current, total) => ` ${current} / ${total}`}

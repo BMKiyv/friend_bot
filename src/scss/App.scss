@@ -95,7 +95,10 @@ h3{
   }
 }
 
-.container.advisers#advisers{
+.container.advisers#advisers,
+.container.solution,
+.container.process,
+.container.team{
   @media (min-width:320px) and (max-width:767px){
     max-width: 100%;
   }
