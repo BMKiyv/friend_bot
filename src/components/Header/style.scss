@@ -28,8 +28,10 @@
   &-white {
     background: var(--white);
     border-bottom: 1px solid #DADCE5;
-
-    @media (min-width:320px) and (max-width:768px) {
+    @media (min-width:768px) and (max-width:1240px) {
+    padding: 20px 0 8px 40px;
+    }
+    @media (min-width:320px) and (max-width:767px) {
       padding: 20px 0 8px 15px;
     }
   }
@@ -39,13 +41,19 @@
     padding: 20px 0 8px 40px;
     position: fixed;
 
-    @media (min-width:320px) and (max-width:768px) {
+    @media (min-width:320px) and (max-width:767px) {
       padding: 20px 0 8px 15px;
     }
   }
 
-  &-pad {
+  &__pad {   
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+     @media (min-width:320px) and (max-width:1240px) {
     padding: 0;
+    display: block;
+     }
   }
 
   &__visible {
@@ -60,7 +68,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 29px 0 27px 0;
+    padding: 29px 0 25px 0;
 
     @media (min-width:320px) and (max-width:1240px) {
       padding: 20px 0 0 0;
@@ -131,15 +139,13 @@
   top: 20px;
 
   @media (min-width:320px) and (max-width:768px) {
-    right: 40px;
+    right: 66px;
   }
 }
 
 .menu__btn {
   display: flex;
-  /* используем flex для центрирования содержимого */
   align-items: center;
-  /* центрируем содержимое кнопки */
   position: absolute;
   top: 0px;
   left: 0px;
@@ -173,20 +179,36 @@
   top: 8px;
 }
 
-#menu__toggle:checked~.menu__btn>span {
-  background-color: white;
-}
+// #menu__toggle:checked~.menu__btn>span {
+//   background-color: white;
+// }
 
-#menu__toggle:checked~.menu__btn>span::before {
-  background-color: white;
-}
+// #menu__toggle:checked~.menu__btn>span::before {
+//   background-color: white;
+// }
 
-#menu__toggle:checked~.menu__btn>span::after {
-  background-color: white;
-}
+// #menu__toggle:checked~.menu__btn>span::after {
+//   background-color: white;
+// }
 
-#menu__toggle:checked~.menu__btn {
-  background-color: #386CC5;
+// #menu__toggle:checked~.menu__btn {
+//   background-color: #386CC5;
+// }
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
 }
 
 .menu__btn>span,

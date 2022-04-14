@@ -22,11 +22,11 @@
             margin: 0;
         }
         @media (min-width:320px) and (max-width:767px){
-            width: 300px;
+            width: 100%;
              margin: 0;
         }
         &[open] > .answers__answer{
-            width: 100%;
+            width: inherit;
             background: var(--card-background);
             border-radius: 0 0 30px 30px;
             margin-top: -7px;
@@ -69,7 +69,7 @@
     }
     &__question{
         position: relative;
-        width: 100%;
+        width: inherit;
         padding: 30px 40px;
         text-align: left;
         background: var(--card-background);

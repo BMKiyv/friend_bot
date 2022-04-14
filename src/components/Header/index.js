@@ -22,7 +22,7 @@ const Header = () => {
             <div className='header__visible header__logo'>
                 <img src='/images/headlogo.png' alt='logo' />
             </div>
-            <div className={mobileNav ? 'header__mobile' : 'header__pad'}>
+            <div className={mobileNav ? 'header__mobile' : 'header__wrap'}>
                 <div className={mobileNav ? 'container header__wrap': 'container header__pad'}>
 
                     <div>
