@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import Navigation from '../Navigation';
+import Navigation from '../../components/Navigation';
 
 const Footer = () => {
     return (

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './style.scss';
-import Navigation from '../Navigation';
+import Navigation from '../../components/Navigation';
 import { useOnScroll } from '../../utils/customHooks/useOnScroll';
 
 const Header = () => {

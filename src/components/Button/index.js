@@ -8,8 +8,7 @@ import './style.scss';
 //import { URL_LANG } from '../../utils/constants';
 
 const Btn = ({
-    url, theme,img, title, onPress = () => {
-    }, full, nofollow = false,
+    url, theme,img, title, onPress, full, nofollow = false,
 }) => {
 
     const renderBtn = () => {
