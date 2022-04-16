@@ -9,19 +9,39 @@ const Navigation = ({footer,mobileNav,onClose}) => {
         const yOffset = num; 
         window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
     }
+
+    // const activateClass = (el)=>{
+    //     let target = el.target
+    //     target.tabIndex = 1
+    //     target.className = 'selected'
+    //     console.log(target);
+    // }
+    // const removeClass = (el)=> {
+    //     let target = el.target
+    //     target.tabIndex = -1
+    //     target.className = mobileNav?'navigation__link-mobile':'navigation__link'
+    // }
+    // useEffect(()=>{
+    //     document.addEventListener('blur', removeClass)
+    //     return ()=> document.removeEventListener('blur',removeClass)
+    // })
     return (
         <nav className={footer?'navigation':!mobileNav?'navigation navigation__header': 'navigation navigation__header-mobile'}>
             <HashLink to ='/#main' 
                 smooth 
                 onClick = {onClose}
+                //onBlur = {removeClass}
+                //onFocus = {activateClass}
                 scroll={el => scrollWithOffset(el)} 
                 activeclassname = 'selected' 
                 className = {mobileNav?'navigation__link-mobile':'navigation__link'}>ГОЛОВНА</HashLink>
             <HashLink to ='/#solution' 
                 smooth 
+                activeclassname = 'selected' 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)} 
-                activeclassname = 'selected'  
+                //onBlur = {removeClass}
+                //onFocus = {activateClass}activeclassname = 'selected'  
                 className = {mobileNav?'navigation__link-mobile':'navigation__link'}>НАШЕ РІШЕННЯ</HashLink>
             <HashLink to ='/#aboutbot' 
                 smooth 

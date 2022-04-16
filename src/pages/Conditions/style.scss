@@ -1,0 +1,48 @@
+.conditions{
+    max-width: 650px;
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    &__title{
+        text-align: left;
+        margin-bottom: 30px;
+        width: 100%;
+        &-second{
+            text-align: left;
+            margin-bottom: 20px;
+        width: 100%
+        }
+    }
+    &__content{
+        margin-bottom: 50px;
+    }
+    &__list{
+        &-title{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            width: 100%;
+            color: var(--main-color);
+        }
+        &-item{
+            list-style-type:none;
+            list-style-position: inside;
+            &:before{
+                content: '';
+                width: 10px;
+                height: 2px;
+                top: 16px;
+                left: -16px;
+                display: block;
+                position: relative;
+                background-color: rgba(56, 108, 197, 0.8);
+            }
+        }
+      
+    }
+    &__marker{
+        color:rgba(56, 108, 197, 0.8);
+    }
+}

@@ -1,10 +1,55 @@
 .team{
+    display: grid;
+    grid-template-columns: 710px 580px;
+    grid-column-gap: 30px;
+        @media (min-width:1024px) and (max-width:1240px){
+            grid-template-rows: 650px 220px;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 70px;
+        }
+    &___history{
+        background: var(--card-background);
+        border-radius: 0 0 30px 30px;
+        padding: 20px 65px 10px 50px;
+        @media (min-width:1024px) and (max-width:1240px){
+            width: 570px;
+            margin: 0 auto;
+        }
+        &-title{
+            text-align: left;
+            background: var(--card-background);
+            border-radius: 30px 30px 0 0;
+            padding: 40px 65px 0 50px;
+             @media (min-width:1024px) and (max-width:1240px){
+                margin: 0 auto;
+                background: transparent;
+                width: 570px;
+             }
+        }
+        &-firstcontent{
+            font-size: 18px;
+            line-height: 34px;
+        }
+        &-content{
+            font-size: 18px;
+            line-height: 34px;
+            margin-bottom: 30px;
+        }
+    }
+    &__gallery{
+        padding-top: 80px;
+        @media (min-width:1024px) and (max-width:1240px){
+            padding-top: 0px;
+        }
+    }
     &__title{
-        text-align: center;
+        text-align: left;
+        margin-bottom: 20px;
     }
     &__carousel{
-        margin-top: 37px;
-        margin-bottom: 90px;
+        //margin-top: 37px;
+        //margin-bottom: 90px;
          @media (min-width:1024px) and (max-width:1240px){
             margin-top: 26px;
             margin-bottom: 64px;
@@ -12,8 +57,12 @@
     }
     &__items{
         display: grid;
-        grid-column-gap: 15px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        @media (min-width:1024px) and (max-width:1240px){
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
         @media (min-width:768px) and (max-width:1023px){
             grid-column-gap: 9px;
         }
@@ -24,7 +73,7 @@
         &-item{
             background: var(--card-background);
             border-radius: 30px;
-            padding: 40px;
+            padding: 56px 64px;
              @media (min-width:1024px) and (max-width:1240px){
                 padding: 29px;
                 border-radius: 22px;

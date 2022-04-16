@@ -225,3 +225,85 @@
 .menu__item {
   transition-duration: .25s;
 }
+
+
+
+
+
+
+
+
+
+
+
+#menuApp__toggle {
+  opacity: 0;
+}
+
+.hamburgerApp-menu {
+  position: absolute;
+  right: 70px;
+  top: 20px;
+
+  @media (min-width:320px) and (max-width:768px) {
+    right: 66px;
+  }
+}
+.menuApp__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #386CC5;
+  padding: 17px;
+}
+
+.menuApp__btn>span,
+.menuApp__btn>span::before,
+.menuApp__btn>span::after {
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.menuApp__btn>span::before {
+  content: '';
+  top: -8px;
+}
+
+.menuApp__btn>span::after {
+  content: '';
+  top: 8px;
+}
+
+#menuApp__toggle:checked~.menuApp__btn>span {
+  background-color: transparent;
+  transform: rotate(45deg);
+}
+
+#menuApp__toggle:checked~.menuApp__btn>span::before {
+  background-color: #386CC5;
+    top: 0;
+  transform: rotate(0);
+}
+
+#menuApp__toggle:checked~.menuApp__btn>span::after {
+  background-color: #386CC5;
+    top: 0;
+  transform: rotate(90deg);
+}
+
+#menuApp__toggle:checked~.menuApp__btn {
+  background-color: transparent;
+    visibility: visible;
+  left: 0;
+}

@@ -1,11 +1,13 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './style.scss';
 import Navigation from '../../components/Navigation';
 import { useOnScroll } from '../../utils/customHooks/useOnScroll';
 
-const Header = () => {
+const Header = ({mobile}) => {
     const [mobileNav, setMobileNav] = useState(false);
     const bgLight = useOnScroll();
+
+    useEffect(()=>setMobileNav(mobile),[mobile])
 
     const activateMobileNav = () => {
         setMobileNav((prev)=>!prev)

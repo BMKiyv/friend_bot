@@ -11,19 +11,20 @@ import Team from '../../components/Team';
 import Advisers from '../../components/Advisers';
 
 const Content = () => {
+
     return (
-        <>
-        <First />
-        <Solution />
-        <HowItWork />
-        <About />
-        <Processing />
-        <Principles/>
-        <Partners />
-        <Answers />
-        <Team />
-        <Advisers />
-        </>
+        <section>
+            <First />
+            <Solution />
+            <HowItWork />
+            <About />
+            <Processing />
+            <Principles />
+            <Partners />
+            <Answers />
+            <Team />
+            <Advisers />
+        </section>
     )
 }
 
