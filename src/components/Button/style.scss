@@ -101,10 +101,19 @@
     @media (min-width:768px) and (max-width:1240px) {
       width: 200px;
     }
-
     @media (min-width:320px) and (max-width:767px) {
       width: 250px;
       margin: 0 auto;
+    }
+  }
+
+  &-small{
+    @media (min-width:768px) and (max-width:1023px) {
+      width: 156px;
+      padding: 4px 6px;
+    }
+    @media (min-width:320px) and (max-width:767px) {
+      width: 176px;
     }
   }
 

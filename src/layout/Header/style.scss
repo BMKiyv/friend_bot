@@ -241,9 +241,10 @@
 }
 
 .hamburgerApp-menu {
-  position: absolute;
-  right: 70px;
-  top: 20px;
+  position: sticky;
+  top: 40px;
+  z-index: 10;
+    transform: translate(80%);
 
   @media (min-width:320px) and (max-width:768px) {
     right: 66px;
@@ -306,4 +307,7 @@
   background-color: transparent;
     visibility: visible;
   left: 0;
+}
+.invisible{
+  display: none;
 }

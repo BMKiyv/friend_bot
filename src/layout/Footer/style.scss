@@ -5,13 +5,18 @@
     margin-top: 100px;
     @media (min-width:1024px) and (max-width:1240px){
         margin-top: 70px;
+    height: 70px;
+    margin-bottom: 53px;
         }
         @media (min-width:768px) and (max-width:1023px){
-            height:100px;
+            height: 55px;
+            margin-bottom: 150px;
+            margin-top: 50px;
             }
-    @media (min-width:320px) and (max-width:767px){
-        display:none;
-    }
+            @media (min-width:320px) and (max-width:767px){
+                background: transparent;
+                height: 140px;
+            }
     &__nav{
         padding: 0 60px 0px 0;
         display: flex;
@@ -24,12 +29,37 @@
             padding: 0 40px 0px 0;
         }
         @media (min-width:768px) and (max-width:1023px){
-            width:70%;
+            width:100%;
+            padding: 0;
+        }
+        @media (min-width:320px) and (max-width:767px){
+            background: transparent;
         }
         &-links{
             position: absolute;
             top: -40px;
             right: 60px;
+            @media (min-width:1024px) and (max-width:1240px){
+                top: 83px;
+                left: 25px;
+            }
+            @media (min-width:768px) and (max-width:1023px){
+                top: 140px;
+                left: 40px;
+                text-align: center;
+            }
+             @media (min-width:320px) and (max-width:767px){
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                flex-direction: column;
+                height: 80px;
+                align-items: center;
+                justify-content: space-around;
+                    width: 200px;
+             }
 
         }
         &-link{
@@ -37,6 +67,28 @@
             line-height: 14px;
             color: var(--header-color);
             margin-left: 15px;
+            &:first-child{
+                @media (min-width:768px) and (max-width:1023px){
+                    margin-left: 0;
+                }
+            }
+            @media (min-width:320px) and (max-width:767px){
+                margin-left: 0;
+                }
+        }
+    }
+    &__btn{
+        @media (min-width:768px) and (max-width:1023px){
+            position: absolute;
+            top: 84px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        @media (min-width:320px) and (max-width:767px){
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }
@@ -44,16 +96,13 @@
     margin-left: 60px;
     position: absolute;
     bottom: 0;
-    display: block;
-     @media (min-width:768px) and (max-width:1240px){
-        margin-left: 40px;
-        height: 119px;
-        width: 94px;
+     @media (min-width:320px) and (max-width:1240px){
+        display: none;
      }
      & img{
          max-width: 100%;
          object-fit: contain;
          height: inherit;
-
+         display: block;
      }
 }

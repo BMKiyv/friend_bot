@@ -17,10 +17,13 @@ const Footer = ({path}) => {
                     <HashLink to='/conditions' className='footer__nav-link'>Налаштування файлів cookie</HashLink>
                 </div>
                 <Navigation footer/>
-                <Btn
-                theme='main'
-                title='Стати волонтером'
-                />
+                <div className='footer__btn '>
+                    <Btn
+                        small
+                        theme='main'
+                        title='Стати волонтером'
+                    />
+                </div>
             </div>
         </footer>
     )

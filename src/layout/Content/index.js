@@ -21,8 +21,8 @@ const Content = () => {
             <Processing />
             <Principles />
             <Partners />
-            <Answers />
             <Team />
+            <Answers />
             <Advisers />
         </section>
     )

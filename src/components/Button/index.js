@@ -8,7 +8,7 @@ import './style.scss';
 //import { URL_LANG } from '../../utils/constants';
 
 const Btn = ({
-    url, theme,img, title, onPress, full, nofollow = false,
+    url, theme,img, title, onPress, full, small, nofollow = false,
 }) => {
 
     const renderBtn = () => {
@@ -17,7 +17,7 @@ const Btn = ({
             if (url.indexOf("http") !== -1) {
                 return (
                     <a
-                        className = { `btn btn-${theme} ${full ? "btn-full" : ""}` } href = { url } rel = 'noreferrer' target = '_blank'
+                        className = { `btn btn-${theme} ${full ? "btn-full" :""} ${small?"btn-small": ""}` } href = { url } rel = 'noreferrer' target = '_blank'
                         onClick = { onPress }>
                         {img && <img className = 'btn-img' src = { img } alt = { theme } />}
                         <span className = 'btn_text'>{ title }</span>
@@ -27,7 +27,7 @@ const Btn = ({
 
             return (
                 <Link
-                    className = { `btn btn-${theme} ${full ? "btn-full" : ""}` } to = { url } onClick = { onPress }>
+                    className = { `btn btn-${theme} ${full ? "btn-full" : ""} ${small?"btn-small": ""}` } to = { url } onClick = { onPress }>
                     {img && <img className = 'btn-img' src = { img } alt = { theme } />}
                     <span className = 'btn_text'>{ title }</span>
                 </Link>
@@ -36,7 +36,7 @@ const Btn = ({
         }
 
         return (<div
-            className = { `btn btn-${theme} ${full ? "btn-full" : ""}` } onClick = { onPress }>
+            className = { `btn btn-${theme} ${full ? "btn-full" : ""} ${small?"btn-small": ""}` } onClick = { onPress }>
             <span className = 'btn_text'>{ title }</span>
         </div>);
     };
