@@ -2,12 +2,16 @@ import React,{useState} from 'react';
 import './style.scss';
 import Button from '../Button/index';
 import Modal from '../Modal';
+import ModalSupport from '../Modal/ModalSupport';
 
 const First = () => {
     const [isModal,setIsModal] = useState(false)
 
     const showModal = () =>{
         setIsModal(true)
+    }
+    const hideModal = () => {
+        setIsModal(false)
     }
 
     return (
@@ -33,7 +37,7 @@ const First = () => {
                     />
                 </div>
             </div>
-            {isModal && <Modal isModal = {isModal}/>}
+            {isModal && <Modal isModal = {isModal}><ModalSupport onClose={hideModal}/></Modal>}
         </div>
     )
 }

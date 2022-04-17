@@ -10,7 +10,6 @@ const Modal = ({ isModal, children }) => {
 
     return (
         <div className = 'modalW'>
-            <p>popup is shown</p>
             {children}
         </div>
     );

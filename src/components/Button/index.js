@@ -37,6 +37,7 @@ const Btn = ({
 
         return (<div
             className = { `btn btn-${theme} ${full ? "btn-full" : ""} ${small?"btn-small": ""}` } onClick = { onPress }>
+                {img && <img className = 'btn-more-img' src = { img } alt = { theme } />}
             <span className = 'btn_text'>{ title }</span>
         </div>);
     };
