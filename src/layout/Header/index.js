@@ -6,6 +6,7 @@ import { useOnScroll } from '../../utils/customHooks/useOnScroll';
 const Header = ({mobile}) => {
     const [mobileNav, setMobileNav] = useState(false);
     const bgLight = useOnScroll();
+    const isShown = useOnScroll();
 
     useEffect(()=>setMobileNav(mobile),[mobile])
 
@@ -39,9 +40,9 @@ const Header = ({mobile}) => {
                     </div>
                 </div>
             </div>
-            <div className="hamburger-menu header__visible">
-                <input id="menu__toggle" type="checkbox" onClick={activateMobileNav} />
-                <label className="menu__btn" htmlFor="menu__toggle">
+            <div className={isShown?"hamburgerApp-menu header__visible":"hamburger-menu header__visible"}>
+                <input id={isShown?"menuApp__toggle":"menu__toggle"} type="checkbox" onClick={activateMobileNav} />
+                <label className={isShown?"menuApp__btn":"menu__btn"} htmlFor={isShown?"menuApp__toggle":"menu__toggle"}>
                     <span></span>
                 </label>
             </div>

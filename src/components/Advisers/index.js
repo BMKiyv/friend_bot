@@ -69,7 +69,7 @@ const Advisers = () => {
             //     //console.log(item.style.display,item);
             // }
         }
-    },[key,elem,])
+    },[key,elem,display])
 
 
     
