@@ -16,7 +16,7 @@ const First = () => {
 
     return (
         <div className='first' id='main'>
-            <div className='first__absolute' />
+            <div className='first__absolute'></div>
             <div className='container'>
                 <div className='first__header'>
                     <h1> Підтримка <span role="img" className='bg-pray'></span> психічного здоров'я людей які постраждали від війни<span style={{'display':'block'}}>в Україні<span role="img" className='bg-flag' /></span></h1>

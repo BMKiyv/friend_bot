@@ -80,25 +80,28 @@
     &__absolute {
         height: 500px;
         position: absolute;
-        background-image: url('../../img/firstmess2.png'), url('../../img/firstphone.png'), url('../../img/firstmess1.png');
-        width: 55%;
+        //background-image: url('../../img/firstmess2.png'), url('../../img/firstphone.png'), url('../../img/firstmess1.png');
+        background-image: url('../../img/firstphonex2.png');
+        width: 57%;
         right: 0;
         top: 80px;
         background-repeat: no-repeat;
-        background-position: 454px 67px, left, 525px 215px;
+        background-size: contain;
+       // background-position: 454px 67px, left, 525px 215px;
 
         @media (min-width:1024px) and (max-width:1240px) {
             height: 100%;
-            top: 7px;
-            background-size: 32%, 66%, 22%;
-            background-position: 307px 64px,left, 354px 160px;
+            top: 36px;
+           // background-size: 32%, 66%, 22%;
+            //background-position: 307px 64px,left, 354px 160px;
             width: 50%;
+            background-size: contain;
         }
 
         @media (min-width:768px) and (max-width:1023px) {
-            background-image: url('../../img/firstphone.png');
+            background-image: url('../../img/firstmobilex2.png');
             width: 50%;
-            background-position: 0px 92px;
+            background-position: 0px 38px;
             background-size: 87%;
             height: 100%;
             top: 0;
@@ -107,13 +110,13 @@
         @media (min-width:320px) and (max-width:767px) {
             height: 45%;
             position: absolute;
-            background-image: url('../../img/firstmobile.png');
+            background-image: url('../../img/firstmobilex2.png');
             width: 100%;
             right: 0;
             top: 55%;
             background-repeat: no-repeat;
             background-position: bottom;
-            //background-size: 100%;
+            background-size: contain;
         }
 
     }
