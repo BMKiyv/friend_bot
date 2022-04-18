@@ -1,30 +1,16 @@
 import React from 'react';
 import {HashLink} from 'react-router-hash-link';
 import './style.scss';
+import I18n from "../../I18n";
 
-const Navigation = ({footer,mobileNav,onClose}) => {
+const Navigation = ({footer,mobileNav,onClose,lang}) => {
     let num = -80;
     const scrollWithOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
         const yOffset = num; 
         window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
     }
-
-    // const activateClass = (el)=>{
-    //     let target = el.target
-    //     target.tabIndex = 1
-    //     target.className = 'selected'
-    //     console.log(target);
-    // }
-    // const removeClass = (el)=> {
-    //     let target = el.target
-    //     target.tabIndex = -1
-    //     target.className = mobileNav?'navigation__link-mobile':'navigation__link'
-    // }
-    // useEffect(()=>{
-    //     document.addEventListener('blur', removeClass)
-    //     return ()=> document.removeEventListener('blur',removeClass)
-    // })
+    //console.log(lang)
     return (
         <nav className={footer?'navigation':!mobileNav?'navigation navigation__header': 'navigation navigation__header-mobile'}>
             <HashLink to ='/#main' 
@@ -34,57 +20,57 @@ const Navigation = ({footer,mobileNav,onClose}) => {
                 //onFocus = {activateClass}
                 scroll={el => scrollWithOffset(el)} 
                 activeclassname = 'selected' 
-                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>ГОЛОВНА</HashLink>
-            <HashLink to ='/#solution' 
+                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{I18n.t('navMain')}</HashLink>
+            <HashLink to ={`${lang}/#solution` }
                 smooth 
                 activeclassname = 'selected' 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)} 
                 //onBlur = {removeClass}
                 //onFocus = {activateClass}activeclassname = 'selected'  
-                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>НАШЕ РІШЕННЯ</HashLink>
-            <HashLink to ='/#aboutbot' 
+                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{I18n.t('navSolution')}</HashLink>
+            <HashLink to ={`${lang}/#aboutbot`} 
                 smooth 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)} 
                 activeclassname = 'selected'  
-                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>ПРО ЧАТБОТ</HashLink>
-            <HashLink to ='/#howitwork' 
+                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{I18n.t('navAbout')}</HashLink>
+            <HashLink to ={`${lang}/#howitwork`} 
                 smooth 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)} 
                 activeclassname = 'selected'  
-                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>ЯК ПРАЦЮЄ</HashLink>
-            <HashLink to ='/#principles' 
+                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{I18n.t('navHowItWork')}</HashLink>
+            <HashLink to ={`${lang}/#principles`}
                 smooth 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)} 
                 activeclassname = 'selected'  
-                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>НАШІ ПРИНЦИПИ</HashLink>
-            <HashLink to ='/#partners' 
+                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{I18n.t('navPrinciples')}</HashLink>
+            <HashLink to ={`${lang}/#partners`} 
                 smooth 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)} 
                 activeclassname = 'selected'  
-                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>ПАРТНЕРИ</HashLink>
-            <HashLink to ='/#faq' 
+                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{I18n.t('navPartners')}</HashLink>
+            <HashLink to ={`${lang}/#faq`} 
                 smooth 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)}  
                 activeclassname = 'selected' 
                 className = {mobileNav?'navigation__link-mobile':'navigation__link'}>FAQ</HashLink>
-            <HashLink to ='/#team' 
+            <HashLink to ={`${lang}/#team`}
                 smooth 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)} 
                 activeclassname = 'selected'  
                 className = {mobileNav?'navigation__link-mobile':'navigation__link'}>КОМАНДА</HashLink>
-            <HashLink to ='/#advisers' 
+            <HashLink to ={`${lang}/#advisers`} 
                 smooth 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)}  
                 activeclassname = 'selected' 
-                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>ЕДВАЙЗЕРИ</HashLink>
+                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{I18n.t('navEdvisers')}</HashLink>
         </nav>
     )
 }

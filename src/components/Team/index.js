@@ -109,7 +109,7 @@ const Team = () => {
                                     theme='more'
                                     title=''
                                     onPress = {readTeam}
-                                    img = {more?'/images/btnless.svg': 'images/bull3.svg'}
+                                    img = {more?'/images/btnless.svg': '/images/bull3.svg'}
                                 />
                                 </div>
             </div>

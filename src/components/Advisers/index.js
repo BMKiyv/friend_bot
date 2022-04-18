@@ -46,28 +46,19 @@ const Advisers = () => {
 
     const readMore = useCallback((e)=> {
             const target = e.currentTarget
-           // console.log(key)
 
                 setKey(target.dataset.key)
                 setDisplay(!display)
         
     },[display])
 
-    useEffect(()=>{
-       
-        console.log(key,display)
-        
+    useEffect(()=>{        
         for(let item of elem){
             let show =  display?'block':'none'
             if(item.dataset.ind===key){
                 item.style.display = show;
                 console.log(show)
             }
-
-            // else{
-            //     item.style.display = 'none'
-            //     //console.log(item.style.display,item);
-            // }
         }
     },[key,elem,display])
 

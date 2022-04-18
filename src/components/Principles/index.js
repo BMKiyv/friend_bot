@@ -1,42 +1,43 @@
 import React from 'react';
 import './style.scss';
+import I18n from '../../I18n'
 
 const Principles = () => {
     const principles = [
         {
-            header: 'Допомога абсолютно безкоштовна',
-            text: 'Ми не переслідуємо фінансові цілі',
+            header: `${I18n.t('principlesHeader1')}`,
+            text: `${I18n.t('principlesText1')}`,
             className: '/images/palms.svg'
         },
         {
-            header: 'Висококваліфіковані спеціалісти',
-            text: 'Кваліфікація кожного спеціаліста перевіряється та підтверджується',
+            header: `${I18n.t('principlesHeader2')}`,
+            text: `${I18n.t('principlesText2')}`,
             className: '/images/doctor.svg'
         },
         {
-            header: 'Зручний і швидкий доступ + мінімум зусиль',
-            text: 'Швидка реєстрація та оперативний підбір фахівця',
+            header: `${I18n.t('principlesHeader3')}`,
+            text: `${I18n.t('principlesText3')}`,
             className: '/images/fingers.svg'
         },
         {
-            header: 'Універсальність',
-            text: 'Можливість знайти терапевта, який володіє вашою мовою',
+            header: `${I18n.t('principlesHeader4')}`,
+            text: `${I18n.t('principlesText4')}`,
             className: '/images/message.svg'
         },
         {
-            header: 'Індивідуальний підхід',
-            text: 'Можливість вибрати зручний спосіб спілкування, зручний час для консультації',
+            header: `${I18n.t('principlesHeader5')}`,
+            text: `${I18n.t('principlesText5')}`,
             className: '/images/smile3.svg'
         },
         {
-            header: 'Захист персональних даних',
-            text: 'Жорстка політика конфіденційності, вся інформація надійно захищена',
+            header: `${I18n.t('principlesHeader6')}`,
+            text: `${I18n.t('principlesText6')}`,
             className: '/images/smile2.svg'
         }
     ]
     return (
         <div className='container principles' id='principles'>
-            <h3>Наші прінципи:</h3>
+            <h3>{I18n.t('principlesTitle')}</h3>
             <div className='principles__content'>
                 {principles.map((item,i)=>{
                     return (

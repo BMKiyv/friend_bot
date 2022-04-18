@@ -3,27 +3,28 @@ import './style.scss';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { carouselPropTeam } from '../../utils/constants';
+import I18n from '../../I18n'
 
 const processing = [
     {
         class: '/images/smile4.svg',
-        title: 'Тривожний стан',
-        text: 'Автоматизований співрозмовник (чатбот)'
+        title: `${I18n.t('processText1')}`,
+        text: `${I18n.t('processDescription')}`
     },
     {
         class: '/images/message.svg',
-        title: 'Діалог з “Другом”',
-        text: 'Автоматизований співрозмовник (чатбот)'
+        title: `${I18n.t('processText2')}`,
+        text: `${I18n.t('processDescription')}`
     },
     {
         class: '/images/book.svg',
-        title: 'Набір вправ',
-        text: 'Автоматизований співрозмовник (чатбот)'
+        title: `${I18n.t('processText3')}`,
+        text: `${I18n.t('processDescription')}`
     },
     {
         class: '/images/smile5.svg',
-        title: 'Покращення стану',
-        text: 'Автоматизований співрозмовник (чатбот)'
+        title: `${I18n.t('processText4')}`,
+        text: `${I18n.t('processDescription')}`
     }
 ]
 
@@ -108,7 +109,7 @@ const Processing = () => {
 
     return (
         <div className='container process' id='howitwork'>
-            <h3 className='process__header'>Як працює</h3>
+            <h3 className='process__header'>{I18n.t('processTitle')}</h3>
             <div className='process__carousel'>
                 <Carousel
                     statusFormatter={(current, total) => ` ${current} / ${total}`}

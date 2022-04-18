@@ -1,17 +1,18 @@
 import React from 'react';
 import './style.scss';
+import I18n from '../../I18n'
 
 const About = () => {
     const items = [
-        'Джерело достовірної інформації',
-        'Швидкий доступ до спеціалістів',
-        'Завжди поруч з тобою',
-        'Джерело достовірної інформації'
+        `${I18n.t('aboutMessage1')}`,
+        `${I18n.t('aboutMessage2')}`,
+        `${I18n.t('aboutMessage3')}`,
+        `${I18n.t('aboutMessage4')}`
     ]
     return (
         <div className='container about-wrap'>
             <div className='about'>
-                <h3 className='about__header'>Ваш друг (чатбот) - це</h3>
+                <h3 className='about__header'>{I18n.t('aboutTitle')}</h3>
                 <div className='about__items'>
                     {items.map((item,i)=>{
                         return (

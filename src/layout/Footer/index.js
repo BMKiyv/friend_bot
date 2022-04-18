@@ -3,8 +3,10 @@ import './style.scss';
 import Navigation from '../../components/Navigation';
 import Btn from '../../components/Button';
 import {HashLink} from 'react-router-hash-link';
+import I18n from "../../I18n";
+import { LANG } from "../../utils/constants";
 
-const Footer = ({path}) => {
+const Footer = () => {
     return (
         <footer className='container footer'>
             <div className='bot_footer'>
@@ -12,16 +14,16 @@ const Footer = ({path}) => {
             </div>
             <div className='footer__nav'>
                 <div className='footer__nav-links'>
-                    <HashLink to='/conditions' className='footer__nav-link'>Положення та умови</HashLink>
-                    <HashLink to='/conditions' className='footer__nav-link'>Політика конфіденційності</HashLink>
-                    <HashLink to='/conditions' className='footer__nav-link'>Налаштування файлів cookie</HashLink>
+                    <HashLink to='/conditions' className='footer__nav-link'>{I18n.t('footerConditions')}</HashLink>
+                    <HashLink to='/conditions' className='footer__nav-link'>{I18n.t('footerPolitics')}</HashLink>
+                    <HashLink to='/conditions' className='footer__nav-link'>{I18n.t('footerCoockies')}</HashLink>
                 </div>
-                <Navigation footer/>
+                <Navigation footer lang={LANG==='uk'? '': LANG}/>
                 <div className='footer__btn '>
                     <Btn
                         small
                         theme='main'
-                        title='Стати волонтером'
+                        title={I18n.t('footerBtn')}
                     />
                 </div>
             </div>

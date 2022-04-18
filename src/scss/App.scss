@@ -82,13 +82,18 @@ h3{
   max-width: 1320px;
   margin: 0 auto;
   @media (max-width:1420px){
-    max-width: calc(100% - 120px);
+    max-width:1246px
+  }
+  @media (min-width:1241px) and (max-width:1360px){
+      max-width:1130px
   }
   @media (min-width:1024px) and (max-width:1240px){
-    max-width: calc(100% - 80px);
+    //max-width: calc(100% - 80px);
+    max-width: 944px;
   }
   @media (min-width:768px) and (max-width:1023px){
-    max-width: calc(100% - 80px);
+    //max-width: calc(100% - 80px);
+    max-width: 688px;
   }
   @media (min-width:320px) and (max-width:767px){
     max-width: calc(100% - 30px);

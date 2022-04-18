@@ -1,5 +1,6 @@
 .modalW {
     position: fixed;
+    overflow: auto;
     top:0;
     bottom:0;
     left:0;
@@ -11,11 +12,13 @@
     z-index: 10;
     &-wrap {
         background: white;
-    width: 700px;
-    padding: 0 50px 50px 50px;
-    border-radius: 13px;
-    display: flex;
-    flex-direction: column;
+        width: 620px;
+        padding: 0 50px 50px 50px;
+        border-radius: 13px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 5%;
     @media (min-width:320px) and (max-width:767px){
         padding: 0 30px 30px 30px;
     }
@@ -120,5 +123,8 @@
             left: 90%;
             background: transparent;
     }
+    &:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
     }
   }

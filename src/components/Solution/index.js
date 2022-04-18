@@ -3,26 +3,27 @@ import './style.scss';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { carouselPropTeam } from '../../utils/constants';
+import I18n from '../../I18n';
 
 const cardData = [
     {
         class: '/images/heart.svg',
-        description: 'Перша психологічна допомога'
+        description: `${I18n.t('solutionText1')}`
     },
     {
         class: '/images/bot.svg',
-        description: 'Автоматизований співрозмовник (чатбот)'
+        description: `${I18n.t('solutionText2')}`
     },  {
         class: '/images/brain.svg',
-        description: 'Заснований на когнітивно-поведінковій терапії'
+        description: `${I18n.t('solutionText3')}`
     },
     {
         class: '/images/messages.png',
-        description: 'Щоденні короткі діалоги'
+        description: `${I18n.t('solutionText4')}`
     },
             {
         class: '/images/telegram.svg',
-        description: 'Завжди під рукою (месенджер, додаток)'
+        description: `${I18n.t('solutionText5')}`
     }
 ]
 
@@ -47,8 +48,6 @@ const Solution = () => {
 
         let countArrays = 0;
 
-        //let countElements = 0;
-
         for (const item of cardData) {
             if (width < 768) {
                 groupArrSpec[countArrays].push(renderingCard(item));
@@ -61,18 +60,6 @@ const Solution = () => {
                     break;
                 }
             }
-
-            // else if (width > 767) {
-            //     if (countElements < 4) {
-            //         countElements += 1;
-            //     } else {
-            //         countArrays += 1;
-            //         countElements = 1;
-            //         groupArrSpec[countArrays] = [];
-            //     }
-
-            //     groupArrSpec[countArrays].push(renderingCard(item));
-            // }
         }
 
         setGroupCards(groupArrSpec)
@@ -106,7 +93,7 @@ const Solution = () => {
 
     return (
         <div className='container solution' id='solution'>
-            <h3 className='solution__header'>Наше рішення:</h3>
+            <h3 className='solution__header'>{I18n.t('solutionTitle')}</h3>
             <div className={width > 767?'solution__wrap':''}>
                 {width > 767?cardData.map((item, i) => {
                     return (

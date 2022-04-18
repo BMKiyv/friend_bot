@@ -22,7 +22,7 @@
     }
 
     &__header {
-        width: 50%;
+        width: 54%;
         padding-top: 140px;
 
         @media (min-width:1024px) and (max-width:1240px) {
@@ -80,31 +80,31 @@
     &__absolute {
         height: 500px;
         position: absolute;
-        //background-image: url('../../img/firstmess2.png'), url('../../img/firstphone.png'), url('../../img/firstmess1.png');
         background-image: url('../../img/firstphonex2.png');
         width: 57%;
         right: 0;
         top: 80px;
         background-repeat: no-repeat;
         background-size: contain;
-       // background-position: 454px 67px, left, 525px 215px;
+
+        @media (min-width:1241px) and (max-width:1380px) {
+            top: 102px;
+            }
 
         @media (min-width:1024px) and (max-width:1240px) {
             height: 100%;
             top: 36px;
-           // background-size: 32%, 66%, 22%;
-            //background-position: 307px 64px,left, 354px 160px;
-            width: 50%;
+            width: 515px;
             background-size: contain;
         }
 
         @media (min-width:768px) and (max-width:1023px) {
             background-image: url('../../img/firstmobilex2.png');
-            width: 50%;
+            width: 384px;;
             background-position: 0px 38px;
             background-size: 87%;
             height: 100%;
-            top: 0;
+            top: 53px;
         }
 
         @media (min-width:320px) and (max-width:767px) {

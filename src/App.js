@@ -15,7 +15,9 @@ function App() {
          <Routes history = {customHistory}> 
          <Route path = '/' element = {<Main path = {path}/>} >
             <Route  path = '/' element = {<Home />} />
-            <Route path="/conditions" exact  element ={<Conditions/>} />  
+            <Route  path = '/ru' element = {<Home />} />
+            <Route path="/conditions" exact  element ={<Conditions/>} />
+            <Route path="/ru/conditions" exact  element ={<Conditions/>} /> 
           </Route> 
         </Routes>
     </Suspense>

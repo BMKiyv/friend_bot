@@ -1,36 +1,35 @@
 import React from 'react';
 import './style.scss';
 import Button from '../Button'
+import I18n from "../../I18n";
 
 
 const HowItWork = () => {
     const messages = [
         {
-            text: 'Мені потрібна підтрімка',
+            text: `${I18n.t('howItWorkMessage1')}`,
             className: '/images/smile7.svg'
         },
         {
-            text: 'Чудово',
+            text: `${I18n.t('howItWorkMessage2')}`,
             className: '/images/smile9.svg'
         },
         {
-            text: 'Так собі',
+            text: `${I18n.t('howItWorkMessage3')}`,
             className: '/images/smile8.svg'
         },
         {
-            text: 'Я впораюсь',
+            text: `${I18n.t('howItWorkMessage4')}`,
             className: '/images/smile9.svg'
         },
         {
-            text: 'Так собі',
+            text: `${I18n.t('howItWorkMessage5')}`,
             className: '/images/smile10.svg'
         }
     ]
     return (
         <div className='container howitwork' id='aboutbot'>
-            {/* <h2 className='howitwork__title'>Ми створили цю платформу, тому що для нас важливо<span className='howitwork__title'> піклуватися про всіх, хто постраждав 
-            від війни в Україні.</span></h2> */}
-            <h2 className='howitwork__title'>Ми створили цю платформу, тому що для нас важливо піклуватися про всіх, хто постраждав від війни в Україні.</h2>
+            <h2 className='howitwork__title'>{I18n.t('howItWorkTitle')}</h2>
             <div className='howitwork__content'>
                 <div className='howitwork__content-bigcard'>
                     <div className='howitwork__content-images'>
@@ -40,24 +39,21 @@ const HowItWork = () => {
                           )
                           })}
                     </div> 
-                    <p className='howitwork__content-text solid bold'>
-                        Ця сторінка надає вам швидкий і прямий 
-                        онлайн-доступ до чат-боту, що допоможе швидко впоратись із наслідками травматичної події.
-                    </p>
+                    <p className='howitwork__content-text solid bold'>{I18n.t('howItWorkBigCard')}</p>
                     <Button 
                         url = 'https://google.com'
                         theme='main'
-                        title='Почати спілкування'
+                        title={I18n.t('firstButtonBlue')}
                         img='/images/tgwhite.png'
                     />
                 </div>
                 <div className='howitwork__content-card'>
                     <span><img className='howitwork__content-img' src='/images/nurse.svg' alt='nurse'/></span>
-                    <p className='howitwork__content-smalltext solid'>Також ми надаємо доступ до фахівців із психічного здоров’я, які витрачають час, щоб підтримати вас і ваші сім’ї в ці важкі часи.</p>
+                    <p className='howitwork__content-smalltext solid'>{I18n.t('howItworkSmallCard1')}</p>
                 </div>
                 <div className='howitwork__content-card'>
                 <span><img className='howitwork__content-img' src='/images/fingers.svg' alt='nurse'/></span>
-                    <p className='howitwork__content-smalltext solid'>Незалежно від того, що відбувається зараз, важливо залишатися спокійним і сильним, наскільки це можливо. Ми тут, щоб допомогти вам зробити це.</p>
+                    <p className='howitwork__content-smalltext solid'>{I18n.t('howItworkSmallCard2')}</p>
                 </div>
             </div>
         </div>

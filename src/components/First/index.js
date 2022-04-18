@@ -3,6 +3,7 @@ import './style.scss';
 import Button from '../Button/index';
 import Modal from '../Modal';
 import ModalSupport from '../Modal/ModalSupport';
+import I18n from '../../I18n';
 
 const First = () => {
     const [isModal,setIsModal] = useState(false)
@@ -19,20 +20,19 @@ const First = () => {
             <div className='first__absolute'></div>
             <div className='container'>
                 <div className='first__header'>
-                    <h1> Підтримка <span role="img" className='bg-pray'></span> психічного здоров'я людей які постраждали від війни<span style={{'display':'block'}}>в Україні<span role="img" className='bg-flag' /></span></h1>
+                    <h1>{I18n.t('firstTitle1')}<span role="img" className='bg-pray'></span>{I18n.t('firstTitle2')}<span style={{'display':'block'}}>{I18n.t('firstTitle3')}<span role="img" className='bg-flag' /></span></h1>
                 </div>
-                <p className='first__header-text'>Ми безкоштовно допоможемо всім, хто потребує підтримки</p>
+                <p className='first__header-text'>{I18n.t('firstText')}</p>
                 <div className='first__header-button'>
                     <Button 
                         url = 'https://google.com'
                         theme='main'
-                        title='Почати спілкування'
+                        title={I18n.t('firstButtonBlue')}
                         img='/images/tgwhite.png'
                     />
                     <Button 
-                        //url = 'https://bing.com'
                         theme='second'
-                        title='Підтримати нас'
+                        title={I18n.t('firstButtonWhite')}
                         onPress={showModal}
                     />
                 </div>
