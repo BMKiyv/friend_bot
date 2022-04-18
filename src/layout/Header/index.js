@@ -37,7 +37,7 @@ const Header = ({mobile}) => {
 
     const closeMobileNav = ()=> {
         setMobileNav(false)
-        const burger = document.querySelector('#menu__toggle')
+        const burger = isShown?document.querySelector('#menu__toggle'):document.querySelector('#menuApp__toggle');
         burger.checked = false
     }
 

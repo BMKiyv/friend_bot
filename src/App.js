@@ -10,14 +10,16 @@ function App() {
   const customHistory = createBrowserHistory();
   let path = customHistory
   return (
-    <Suspense >
+    <Suspense fallback='Завантажуємось...'>
  
          <Routes history = {customHistory}> 
-         <Route path = '/' element = {<Main path = {path}/>} >
+         <Route path = '/' element = {<Main />} >
             <Route  path = '/' element = {<Home />} />
+            <Route path="/conditions" exact  element ={<Conditions />} />
+          </Route> 
+          <Route path = '/ru' element = {<Main path = {path}/>} >
             <Route  path = '/ru' element = {<Home />} />
-            <Route path="/conditions" exact  element ={<Conditions/>} />
-            <Route path="/ru/conditions" exact  element ={<Conditions/>} /> 
+            <Route path="/ru/conditions" exact  element ={<Conditions />} /> 
           </Route> 
         </Routes>
     </Suspense>

@@ -3,12 +3,12 @@ import{Outlet} from 'react-router-dom';
 import Header from '../Header' ;
 import Footer from '../Footer';
 
-const Main = ({path}) => {
+const Main = () => {
     return(
        <>
        <Header />
         <Outlet/>
-        <Footer path= {path}/>
+        <Footer/>
        </>
     )
 }
