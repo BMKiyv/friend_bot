@@ -1,7 +1,10 @@
 import React from 'react';
 import './style.scss';
 
+import { useTranslation } from "react-i18next";
+
 const Partners = () => {
+    const { t } = useTranslation();
     const partners = [
         {
             src: '/images/moz.png',
@@ -31,7 +34,7 @@ const Partners = () => {
     ]
     return (
         <div className='container' id='partners'>
-            <h3>Партнери</h3>
+            <h3>{t('partnersTitle')}</h3>
             <div className='partners__cards'>
                 {partners.map((item,i)=>{
                     return (

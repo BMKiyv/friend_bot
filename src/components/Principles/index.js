@@ -1,43 +1,44 @@
 import React from 'react';
 import './style.scss';
-import I18n from '../../I18n'
+import { useTranslation } from "react-i18next";
 
 const Principles = () => {
+    const { t } = useTranslation();
     const principles = [
         {
-            header: `${I18n.t('principlesHeader1')}`,
-            text: `${I18n.t('principlesText1')}`,
+            header: `${t('principlesHeader1')}`,
+            text: `${t('principlesText1')}`,
             className: '/images/palms.svg'
         },
         {
-            header: `${I18n.t('principlesHeader2')}`,
-            text: `${I18n.t('principlesText2')}`,
+            header: `${t('principlesHeader2')}`,
+            text: `${t('principlesText2')}`,
             className: '/images/doctor.svg'
         },
         {
-            header: `${I18n.t('principlesHeader3')}`,
-            text: `${I18n.t('principlesText3')}`,
+            header: `${t('principlesHeader3')}`,
+            text: `${t('principlesText3')}`,
             className: '/images/fingers.svg'
         },
         {
-            header: `${I18n.t('principlesHeader4')}`,
-            text: `${I18n.t('principlesText4')}`,
+            header: `${t('principlesHeader4')}`,
+            text: `${t('principlesText4')}`,
             className: '/images/message.svg'
         },
         {
-            header: `${I18n.t('principlesHeader5')}`,
-            text: `${I18n.t('principlesText5')}`,
+            header: `${t('principlesHeader5')}`,
+            text: `${t('principlesText5')}`,
             className: '/images/smile3.svg'
         },
         {
-            header: `${I18n.t('principlesHeader6')}`,
-            text: `${I18n.t('principlesText6')}`,
+            header: `${t('principlesHeader6')}`,
+            text: `${t('principlesText6')}`,
             className: '/images/smile2.svg'
         }
     ]
     return (
         <div className='container principles' id='principles'>
-            <h3>{I18n.t('principlesTitle')}</h3>
+            <h3>{t('principlesTitle')}</h3>
             <div className='principles__content'>
                 {principles.map((item,i)=>{
                     return (

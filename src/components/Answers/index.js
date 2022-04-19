@@ -1,25 +1,27 @@
 import React from 'react';
 import './style.scss';
+import { useTranslation } from "react-i18next";
 
 
 const Answers = () => {
+    const { t } = useTranslation();
     const answers = [
      {
-            question:'Яка кваліфікація фахівців на цій платформі?',
-            answer: 'На цій платформі ви можете знайти найкращих професіоналів з усього світу. Ми ретельно перевіряємо кваліфікацію кожного спеціаліста.'
+            question:`${t('question1')}`,
+            answer: `${t('answer1')}`
         },
         {
-            question:'Яка кваліфікація фахівців на цій платформі?',
-            answer: 'На цій платформі ви можете знайти найкращих професіоналів з усього світу. Ми ретельно перевіряємо кваліфікацію кожного спеціаліста.'
+            question:`${t('question2')}`,
+            answer: `${t('answer2')}`
         },
         {
-            question:'Яка кваліфікація фахівців на цій платформі?',
-            answer: 'На цій платформі ви можете знайти найкращих професіоналів з усього світу. Ми ретельно перевіряємо кваліфікацію кожного спеціаліста.'
+            question:`${t('question3')}`,
+            answer: `${t('answer3')}`
         }   
     ]
     return (
         <div className='container answers' id='faq'>
-            <h3 className='answers__header'>Питання та відповідь</h3>
+            <h3 className='answers__header'>{t('answersTitle')}</h3>
             <div className='answers__details'>
                 {answers.map((item,i)=>{
                     return (

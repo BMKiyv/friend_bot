@@ -2,28 +2,36 @@ import React, {useEffect, useState} from 'react';
 import './style.scss';
 import Navigation from '../../components/Navigation';
 import { useOnScroll } from '../../utils/customHooks/useOnScroll';
-//import { useLocation} from 'react-router-dom';
-//import I18n from "../../I18n";
-import { LANG } from "../../utils/constants";
+import { useTranslation } from "react-i18next";
+//import { LANG } from "../../utils/constants";
 
 const Header = ({mobile}) => {
+    const { i18n } = useTranslation();
     const [mobileNav, setMobileNav] = useState(false);
-    const [activeLang] = useState(LANG);
+    const [activeLang,setActiveLang] = useState('uk');
     const bgLight = useOnScroll();
     const isShown = useOnScroll();
 
-     //console.log('activeLang', activeLang, LANG,location);
 
-     const onChangeLang = (event) => {
-        //console.log('TRUE');
-        const lg = event?.target?.lang;
-        if (LANG === lg) {
-            return null;
-        }
-        window.localStorage.setItem('lg', lg);
-        window.location = lg === 'uk' ? '/' : `/${lg}`;
 
-    };
+    const changeLanguage = (language) => {
+        setActiveLang(language)
+      return  i18n.changeLanguage(language)
+
+        
+      };
+    
+
+    //  const onChangeLang = (event) => {
+    //     //console.log('TRUE');
+    //     const lg = event?.target?.lang;
+    //     if (LANG === lg) {
+    //         return null;
+    //     }
+    //     window.localStorage.setItem('lg', lg);
+    //     window.location = lg === 'uk' ? '/' : `/${lg}`;
+
+    // };
 
     // const isActive = (hash, find) => {
     //     return hash === find;
@@ -37,7 +45,7 @@ const Header = ({mobile}) => {
 
     const closeMobileNav = ()=> {
         setMobileNav(false)
-        const burger = isShown?document.querySelector('#menu__toggle'):document.querySelector('#menuApp__toggle');
+        const burger =document.querySelector('#menu__toggle')
         burger.checked = false
     }
 
@@ -53,24 +61,21 @@ const Header = ({mobile}) => {
                         <Navigation
                          mobileNav={mobileNav}
                          onClose = {closeMobileNav}
-                         lang = {activeLang==='uk'? '': activeLang}
                          />
                     </div>
                     <div className={mobileNav?'header__lang-mobile':'header__lang'}>
                         <button  
-                        lang = 'ru' 
-                        className={`header__lang-item${activeLang === 'ru' ?'-active':''}`}  
-                        onClick = { onChangeLang }>RU</button>
+                        className={`header__lang-item${activeLang==='ru' ?'-active':''}`}  
+                        onClick = { ()=>changeLanguage("ru") }>RU</button>
                         <button 
-                        lang = 'uk' 
-                        className={`header__lang-item${!activeLang || activeLang === 'uk' ?'-active':''}`}  
-                        onClick = { onChangeLang }>UA</button>
+                        className={`header__lang-item${activeLang==='uk' ?'-active':''}`}  
+                        onClick = { ()=>changeLanguage("uk") }>UA</button>
                     </div>
                 </div>
             </div>
             <div className={isShown?"hamburgerApp-menu header__visible":"hamburger-menu header__visible"}>
-                <input id={isShown?"menuApp__toggle":"menu__toggle"} type="checkbox" onClick={activateMobileNav} />
-                <label className={isShown?"menuApp__btn":"menu__btn"} htmlFor={isShown?"menuApp__toggle":"menu__toggle"}>
+                <input id={"menu__toggle"} type="checkbox" onClick={activateMobileNav} />
+                <label className={isShown?"menuApp__btn":"menu__btn"} htmlFor={"menu__toggle"}>
                     <span></span>
                 </label>
             </div>

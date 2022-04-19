@@ -8,7 +8,7 @@ import Main from './layout/Main'
 
 function App() {
   const customHistory = createBrowserHistory();
-  let path = customHistory
+  // let path = customHistory
   return (
     <Suspense fallback='Завантажуємось...'>
  
@@ -17,10 +17,10 @@ function App() {
             <Route  path = '/' element = {<Home />} />
             <Route path="/conditions" exact  element ={<Conditions />} />
           </Route> 
-          <Route path = '/ru' element = {<Main path = {path}/>} >
+          {/* <Route path = '/ru' element = {<Main path = {path}/>} >
             <Route  path = '/ru' element = {<Home />} />
             <Route path="/ru/conditions" exact  element ={<Conditions />} /> 
-          </Route> 
+          </Route>  */}
         </Routes>
     </Suspense>
   );

@@ -1,18 +1,19 @@
 import React from 'react';
 import './style.scss';
-import I18n from '../../I18n'
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+    const { t } = useTranslation();
     const items = [
-        `${I18n.t('aboutMessage1')}`,
-        `${I18n.t('aboutMessage2')}`,
-        `${I18n.t('aboutMessage3')}`,
-        `${I18n.t('aboutMessage4')}`
+        `${t('aboutMessage1')}`,
+        `${t('aboutMessage2')}`,
+        `${t('aboutMessage3')}`,
+        `${t('aboutMessage4')}`
     ]
     return (
         <div className='container about-wrap'>
             <div className='about'>
-                <h3 className='about__header'>{I18n.t('aboutTitle')}</h3>
+                <h3 className='about__header'>{t('aboutTitle')}</h3>
                 <div className='about__items'>
                     {items.map((item,i)=>{
                         return (

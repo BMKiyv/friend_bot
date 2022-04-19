@@ -4,29 +4,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { carouselPropTeam } from '../../utils/constants';
 import Btn from '../Button';
-
-const team = [
-    {
-        src: '/images/team/lagutina.png',
-        name: 'Соня Лагутіна'
-    },
-    {
-        src: '/images/team/lyozin.png',
-        name: 'Артем Льозін'
-    },
-    {
-        src: '/images/team/tkachenko.png',
-        name: 'Анна Ткаченко'
-    },
-    {
-        src: '/images/team/kolchak.png',
-        name: 'Катерина Колчак'
-    }
-]
-
+import team from '../jsons/team';
+import { useTranslation } from "react-i18next";
 
 const Team = () => {
 
+    const { t } = useTranslation();
     const [width, setWidth] = useState(window.innerWidth)
     const [more,setMore] = useState(false)
 
@@ -46,6 +29,16 @@ const Team = () => {
         return (() => window.removeEventListener('resize', getWidth))
     }, [getWidth])
 
+    const renderingCard = useCallback((item) => {
+        return (
+            <div className='team__items-item' key={item.name}>
+                <div className='team__items-img'>
+                    <img src={item.src} alt={item.name} />
+                </div>
+                <p className='team__items-name solid bold'>{t(`${item.name}`)}</p>
+            </div>
+        )
+    },[t])
 
     useEffect(() => {
         const groupArrSpec = [[]];
@@ -67,7 +60,7 @@ const Team = () => {
         }
 
         setGroupTeam(groupArrSpec)
-    }, [width]);
+    }, [width,renderingCard]);
 
     const renderSpecialist = useCallback(() => {
         const loop = (goup, i) => {
@@ -83,26 +76,15 @@ const Team = () => {
 
     }, [groupTeam]);
 
-    const renderingCard = (item) => {
-        return (
-            <div className='team__items-item' key={item.name}>
-                <div className='team__items-img'>
-                    <img src={item.src} alt={item.name} />
-                </div>
-                <p className='team__items-name solid bold'>{item.name}</p>
-            </div>
-        )
-    }
-
     return (
         <div className='container team' id='team'>
             <div className='team___history-wrap'>
-                <h3 className='team___history-title'>Наша історія</h3>
+                <h3 className='team___history-title'>{t('teamTitle')}</h3>
                 <div className={!more?'team___history-hidden':'team___history'}>
-                    <p className='team___history-firstcontent'>Проект ми назвали "Друг". "Друг" - це автоматичний співрозмовник (chatbot), який допомагає контролювати настрій та дізнаватися про себе. Спираючись на терапевтичні рамки, відомі як когнітивно-поведінкова терапія, Друг запитує людей, як вони почуваються і що відбувається в їхньому житті, у форматі коротких щоденних розмов. Друг також говорить про психічне здоров'я та благополуччя та відправляє відео та інші корисні інструменти залежно від настрою та потреб у даний момент.</p>
-                    <p className='team___history-content'> Йдеться про інструмент, який дозволить вирішити масові стандартні потреби та зняти з плечей спеціалістів типову роботу, щоб ті могли ефективніше працювати у нестандартних випадках.</p>
+                    <p className='team___history-firstcontent'>{t('teamHistory1')}</p>
+                    <p className='team___history-content'>{t('teamHistory2')}</p>
 
-                    <p className='team___history-content'>Участь в онлайн-хакатонах для нас новинка. Перший вечір пішов на те, щоб розібрати та перечитати всі гайди, чеклісти, правила чатики у слаці. Увечері ми зателефонували Ірі, обговорили зони відповідальності за проектом і пішли працювати, ніч пройшла продуктивно, сформували прототип нашого майбутнього «Друга», знайшли потенційних партнерів та визначили ключові болі ринку.</p>
+                    <p className='team___history-content'>{t('teamHistory3')}</p>
                 </div>
                 <div className='team___history-btn'>
                 <Btn
@@ -125,7 +107,7 @@ const Team = () => {
                                     <div className='team__items-img'>
                                         <img src={item.src} alt={item.name} />
                                     </div>
-                                    <p className='team__items-name solid bold'>{item.name}</p>
+                                    <p className='team__items-name solid bold'>{t(`${item.name}`)}</p>
                                 </div>
                             )
                         })}

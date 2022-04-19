@@ -3,11 +3,13 @@
         text-align: center;
     }
     &__list{
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 20px;
-        display: grid;
-        margin-top: 40px;
-        margin-bottom: 20px;
+        // grid-template-columns: 1fr 1fr;
+        // grid-column-gap: 20px;
+        // display: grid;
+        // margin-top: 40px;
+        // margin-bottom: 20px;
+        height: 1230px;
+        max-width: 1470px;
         @media (min-width:768px) and (max-width:1240px){
             margin-top: 30px;
             margin-bottom: 20px;
@@ -41,6 +43,21 @@
                 @media (min-width:320px) and (max-width:767px){
                     width: 100px;
                 }
+            }
+            &:nth-child(odd){
+                @media (min-width:1241px) {
+                    float: left;
+                    width: 40%;
+                    margin-right: 20px;
+                }
+
+            }
+            &:nth-child(even){
+                @media (min-width:1241px) {
+                    float:right;
+                    width: 40%;
+                }
+
             }
         }
         &-title{
@@ -100,6 +117,11 @@
                 margin-top: 40px;
                 text-align: center;
             }
+            @media (min-width:1241px){
+                float:right;
+                width: 40%;
+            }
+
         }
         &-lasttext{
             color: var(--white);
@@ -107,6 +129,7 @@
             font-size: 38px;
             line-height: 48px;
             margin-left: 10px;
+            margin-bottom: 110px;
              @media (min-width:768px) and (max-width:1240px){
                 font-size: 27px;
                 line-height: 34px;

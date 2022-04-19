@@ -103,11 +103,21 @@
       border: none;
       color: inherit;
       background-color: transparent;
+      @media (min-width:320px) and (max-width:1240px) {
+        font-size: 20px;
+        line-height: 34px;
+        }
       &-active{
         border-radius: 10px;
         background: var(--blue-color);
         color: var(--white);
         border: none;
+        @media (min-width:320px) and (max-width:1240px) {
+          font-size: 20px;
+          line-height: 34px;
+          padding: 3px 15px;
+          border-radius: 30px;
+          }
       }
 
     }
@@ -142,7 +152,7 @@
 }
 
 .hamburger-menu {
-  position: absolute;
+  position: fixed;
   right: 70px;
   top: 20px;
 
@@ -229,7 +239,7 @@
 
 
   @media (min-width:320px) and (max-width:1240px) {
-    right: 66px;
+    right: 70px;
   }
 }
 .menuApp__btn {
@@ -268,24 +278,24 @@
   top: 8px;
 }
 
-#menuApp__toggle:checked~.menuApp__btn>span {
+#menu__toggle:checked~.menuApp__btn>span {
   background-color: transparent;
   transform: rotate(45deg);
 }
 
-#menuApp__toggle:checked~.menuApp__btn>span::before {
+#menu__toggle:checked~.menuApp__btn>span::before {
   background-color: #386CC5;
     top: 0;
   transform: rotate(0);
 }
 
-#menuApp__toggle:checked~.menuApp__btn>span::after {
+#menu__toggle:checked~.menuApp__btn>span::after {
   background-color: #386CC5;
     top: 0;
   transform: rotate(90deg);
 }
 
-#menuApp__toggle:checked~.menuApp__btn {
+#menu__toggle:checked~.menuApp__btn {
   background-color: transparent;
     visibility: visible;
   left: 0;
