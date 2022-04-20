@@ -1,31 +1,33 @@
 import React from 'react';
 import './style.scss';
 import Btn from '../Button';
+import { useTranslation } from "react-i18next";
 
 const ModalSupport = ({ onClose }) => {
+    const { t } = useTranslation();
 
     return (
         <div className='modalW-wrap'>
             <div className='modalW-close' onClick={onClose}></div>
-            <h2 className='modalW-title'>Ми пишаємося тим, що ми неприбуткові, некорпоровані та безкомпромісні.</h2>
+            <h2 className='modalW-title'>{t('modalTitle')}</h2>
             <div className='modalW-text-wrap'>
-                <p className='modalW-text'>Тисячі таких, як ви, допомагають нам. Ми покладаємося на пожертви, щоб виконати нашу місію та допомогти якомога більшій кількості людей.</p>
-                <p className='modalW-secondtext'>Кошти, зібрані на благодійний рахунок, будуть направлені:</p>
-                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>На допомогу людям</p>
-                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>Створення нових методик</p>
-                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>Оплату праці спеціалістів</p>
-                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>Будуть направлені на допомогу людям</p>
-                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>Частина коштів буде відраховано у фонд повернись живим</p>
-                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>На допомогу людям</p>
-                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>Створення нових методик</p>
-                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>Оплату праці спеціалістів</p>
-                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>Будуть направлені на допомогу людям</p>
-                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>Частина коштів буде відраховано у фонд повернись живим</p>
-                <p className='modalW-lasttext'>Підтримайте нас будь якою сумою</p>
+                <p className='modalW-text'>{t('modalText1')}</p>
+                <p className='modalW-secondtext'>{t('modalText2')}</p>
+                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>{t('modalList1')}</p>
+                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>{t('modalList2')}</p>
+                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>{t('modalList3')}</p>
+                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>{t('modalList4')}</p>
+                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>{t('modalList5')}</p>
+                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>{t('modalList6')}</p>
+                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>{t('modalList7')}</p>
+                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>{t('modalList8')}</p>
+                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>{t('modalList9')}</p>
+                <p className='modalW-list'><span className='modalW-images'><img src='/images/ok.svg' alt='ok' /></span>{t('modalList10')}</p>
+                <p className='modalW-lasttext'>{t('modalLastText')}</p>
             </div>
             <div className='modalW-btn'>
                 <Btn
-                    title='Підтримати нас'
+                    title={t('modalBtn')}
                     onPress={onClose}
                     theme='main'
                 />
