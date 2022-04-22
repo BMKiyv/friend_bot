@@ -8,11 +8,6 @@
     }
     &__list{
 
-        // @media (min-width:768px) and (max-width:1240px){
-        //     margin-top: 30px;
-        //     margin-bottom: 20px;
-        //     grid-column-gap: 14px;
-        // }
         @media (min-width:320px) and (max-width:767px){
                 grid-template-columns: 1fr;
                 display: grid;
@@ -63,19 +58,6 @@
                     width: 100px;
                 }
             }
-            // &:nth-child(odd){
-            //     @media (min-width:1241px) {
-            //       margin-right: 20px;
-            //     }
-
-            // }
-            // &:nth-child(even){
-            //     @media (min-width:1241px) {
-            //         // float:right;
-            //         // width: 39%;
-            //     }
-
-            // }
         }
         &-title{
             margin-top: 20px;
@@ -122,6 +104,15 @@
             margin-top: 20px;
             @media (min-width:768px) and (max-width:1240px){
                 margin-top: 10px;
+            }
+            & img{
+                width: 28px;
+                 @media (min-width:768px) and (max-width:1240px){
+                    width:20px;
+                 }
+                @media (min-width:320px) and (max-width:767px){
+                width:auto;
+                }
             }
         }
         &-lastitem{

@@ -77,14 +77,17 @@ const Team = () => {
     }, [groupTeam]);
 
     return (
-        <div className='container team' id='team'>
-            <div className='team___history-wrap'>
+        <div className='container team'>
+            <div className='team___history-wrap' id='story'>
                 <h3 className='team___history-title'>{t('teamTitle')}</h3>
                 <div className={!more?'team___history-hidden':'team___history'}>
                     <p className='team___history-firstcontent'>{t('teamHistory1')}</p>
-                    <p className='team___history-content'>{t('teamHistory2')}</p>
-
-                    <p className='team___history-content'>{t('teamHistory3')}</p>
+                    <p className='team___history-firstcontent'>{t('teamHistory2')}</p>
+                    <p className='team___history-firstcontent'>{t('teamHistory3')}</p>
+                    <p className='team___history-firstcontent'>{t('teamHistory4')}</p>
+                    <p className='team___history-firstcontent'>{t('teamHistory5')}</p>
+                    <p className='team___history-firstcontent'>{t('teamHistory6')}</p>
+                    <p className='team___history-firstcontent'>{t('teamHistory7')}</p>
                 </div>
                 <div className='team___history-btn'>
                 <Btn
@@ -95,7 +98,7 @@ const Team = () => {
                                 />
                                 </div>
             </div>
-            <div className='team__gallery'>
+            <div className='team__gallery'  id='team'>
                 <h3 className='team__title'>Команда</h3>
 
                 {width > 767 ? 

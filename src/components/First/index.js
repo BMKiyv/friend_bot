@@ -21,17 +21,17 @@ const First = () => {
             <div className='first__absolute'></div>
             <div className='container'>
                 <div className='first__header'>
-                    <h1 className='first__header-title'>{t('firstTitle1')}<span role="img" className='bg-pray'></span>{t('firstTitle2')}<span className='first__header-span'>{t('firstTitle3')}<span role="img" className='bg-flag' /></span></h1>
+                    <h1 className='first__header-title'>{t('firstTitle1')}<span role="img" >🙏</span>{t('firstTitle2')} {t('firstTitle3')}<span role="img">🇺🇦</span></h1>
                 </div>
                 <p className='first__header-text'>{t('firstText')}</p>
                 <div className='first__header-button'>
                     <Button 
-                        url = 'https://google.com'
+                        url = 'https://t.me/friend_first_aid_bot '
                         theme='main'
                         title={t('firstButtonBlue')}
                         img='/images/tgwhite.png'
                     />
-                    <div className='first__header-placeholder'>{t('firstPopUp')}</div>
+                    {/* <div className='first__header-placeholder'>{t('firstPopUp')}</div> */}
                     <Button 
                         placeholder
                         theme='second'

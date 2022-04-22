@@ -11,14 +11,12 @@ const Navigation = ({footer,mobileNav,onClose}) => {
         const yOffset = num; 
         window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
     }
-    //console.log(lang)
+
     return (
         <nav className={footer?'navigation':!mobileNav?'navigation navigation__header': 'navigation navigation__header-mobile'}>
             <HashLink to ='/#main' 
                 smooth 
                 onClick = {onClose}
-                //onBlur = {removeClass}
-                //onFocus = {activateClass}
                 scroll={el => scrollWithOffset(el)} 
                 activeclassname = 'selected' 
                 className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{t('navMain')}</HashLink>
@@ -26,9 +24,7 @@ const Navigation = ({footer,mobileNav,onClose}) => {
                 smooth 
                 activeclassname = 'selected' 
                 onClick = {onClose}
-                scroll={el => scrollWithOffset(el)} 
-                //onBlur = {removeClass}
-                //onFocus = {activateClass}activeclassname = 'selected'  
+                scroll={el => scrollWithOffset(el)}  
                 className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{t('navSolution')}</HashLink>
             <HashLink to ={`/#aboutbot`} 
                 smooth 
@@ -54,18 +50,24 @@ const Navigation = ({footer,mobileNav,onClose}) => {
                 scroll={el => scrollWithOffset(el)} 
                 activeclassname = 'selected'  
                 className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{t('navPartners')}</HashLink>
-            <HashLink to ={`/#faq`} 
+            <HashLink to ={`/#story`} 
                 smooth 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)}  
                 activeclassname = 'selected' 
-                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>FAQ</HashLink>
+                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>{t('navStory')}</HashLink>
             <HashLink to ={`/#team`}
                 smooth 
                 onClick = {onClose}
                 scroll={el => scrollWithOffset(el)} 
                 activeclassname = 'selected'  
                 className = {mobileNav?'navigation__link-mobile':'navigation__link'}>КОМАНДА</HashLink>
+                            <HashLink to ={`/#faq`} 
+                smooth 
+                onClick = {onClose}
+                scroll={el => scrollWithOffset(el)}  
+                activeclassname = 'selected' 
+                className = {mobileNav?'navigation__link-mobile':'navigation__link'}>FAQ</HashLink>
             <HashLink to ={`/#advisers`} 
                 smooth 
                 onClick = {onClose}

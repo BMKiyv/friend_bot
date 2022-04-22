@@ -26,9 +26,9 @@ const Processing = () => {
     const renderingCard = useCallback((item) => {
         return (
             <div className='process__items-item' key={item.title}>
-                <div className='process__items-img'>
-                    <img  src={item.class} alt={item.title}/>
-                </div>
+                <span className='process__items-img'>
+                    {item.class}
+                </span>
                 <p className='process__items-title solid bold'>{t(`${item.title}`)}</p>
                 <p className='process__items-text'>{t(`${item.text}`)}</p>
             </div>

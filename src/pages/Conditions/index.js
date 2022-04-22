@@ -1,11 +1,15 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './style.scss';
 
-import{ useLocation} from 'react-router-dom';
-
 const Conditions = () => {
-    let location = useLocation();
-    console.log(location);
+
+          useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+        });
+      });
+
     return(
         <>
         <div className='container conditions'>

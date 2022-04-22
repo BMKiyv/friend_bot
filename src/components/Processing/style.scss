@@ -100,10 +100,12 @@
 
         &-img {
             margin: 0;
-            max-width: 50px;
+           font-size: 54px;
+           line-height: 54px;
 
             @media (min-width:768px) and (max-width:1240px) {
-                max-width: 39px;
+                font-size: 39px;
+                line-height: 39px;
             }
         }
     }

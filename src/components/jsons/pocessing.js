@@ -1,22 +1,22 @@
 const processing = [
     
     {
-        class: '/images/smile4.svg',
+        class: '😰',
         title: 'processText1',
         text: 'processDescription'
     },
     {
-        class: '/images/message.svg',
+        class: '💬',
         title: 'processText2',
         text: 'processDescription'
     },
     {
-        class: '/images/book.svg',
+        class: '📒',
         title: 'processText3',
         text: 'processDescription'
     },
     {
-        class: '/images/smile5.svg',
+        class: '😄',
         title: 'processText4',
         text: 'processDescription'
     }

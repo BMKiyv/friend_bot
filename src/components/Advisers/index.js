@@ -46,27 +46,35 @@ const Advisers = () => {
     ]
     ]
 
-    const [display,setDisplay] = useState(false)
-    const[key,setKey] = useState(0)
+    const [whole,setWhole] = useState([
+        {key:advisers[0][0].name,show:false},
+        {key:advisers[0][1].name,show:false},
+        {key:advisers[0][2].name,show:false},
+        {key:advisers[1][0].name,show:false},
+        {key:advisers[1][1].name,show:false},
+    ])
     const elem = document.querySelectorAll('.advisers__list-description')
+
 
     const readMore = useCallback((e)=> {
             const target = e.currentTarget
-           // console.log(key)
+           setWhole(whole.map((item)=>item.key===target.dataset.key?{...item,show:!item.show}: item))
+   
+    },[whole])
 
-                setKey(target.dataset.key)
-                setDisplay(!display)
-        
-    },[display])
-
-    useEffect(()=>{        
-        for(let item of elem){
-            let show =  display?'block':'none'
-            if(item.dataset.ind===key){
-                item.style.display = show;
+    useEffect(()=>{             
+        for(let i=0;i<elem.length;i++){
+            for(let state of whole){
+                let show =  state.show?'block':'none' 
+                let button = elem[i].nextElementSibling
+                if(state.key===elem[i].dataset.ind){
+                    elem[i].style.display = show;                  
+                 ( button.dataset.key===state.key && state.show)? button.children[0].firstChild.src='/images/btnless.svg': button.children[0].firstChild.src='/images/bull3.svg' ;
+                    }
                 }
-        }
-    },[key,elem,display])
+            }
+
+    },[elem,whole])
 
     const showCards = (item, i) => {
         return item.shortDescription ?
@@ -75,10 +83,12 @@ const Advisers = () => {
                 <p className='advisers__list-title solid bold'>{item.name}</p>
                 <p className='advisers__list-shortdescription'>{item.shortDescription}</p>
                 <p className='advisers__list-description' data-ind={item.name} style={{'display':'none'}} >{item.description}</p>
-                <div className='advisers__list-btn'>
+                <div className='advisers__list-btn'  data-key={item.name}>
                     <Btn
+                       
                         theme='more'
-                        title='&bull; &bull; &bull;'
+                        img = {'/images/bull3.svg'}
+                        title = ''
                     />
                 </div>
             </div>

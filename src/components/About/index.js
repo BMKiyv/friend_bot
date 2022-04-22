@@ -18,7 +18,7 @@ const About = () => {
                     {items.map((item,i)=>{
                         return (
                             <div className='about__items-item' key={i}>
-                                <img src='/images/ok.svg' alt='ok'/>
+                                <span>✅</span>
                                 <p className='about__items-text solid bold'>{item}</p>
                             </div>
 

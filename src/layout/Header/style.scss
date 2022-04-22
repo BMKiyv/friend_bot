@@ -93,6 +93,8 @@
     display: flex;
 
     &-item {
+      margin-right: 5px;
+       border-radius: 10px;
       display: inline-block;
       height: 26px;
       width: 40px;
@@ -106,8 +108,14 @@
       @media (min-width:320px) and (max-width:1240px) {
         font-size: 20px;
         line-height: 34px;
+        width: 60px;
+        height: 40px;
+        border-radius: 30px;
         }
       &-active{
+        margin-right: 5px;
+      height: 26px;
+      width: 40px;
         border-radius: 10px;
         background: var(--blue-color);
         color: var(--white);
@@ -117,9 +125,16 @@
           line-height: 34px;
           padding: 3px 15px;
           border-radius: 30px;
+          width: 60px;
+          height: 40px;
+          }
+          &:hover{
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
           }
       }
-
+      &:hover{
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
     }
 
     @media (min-width:320px) and (max-width:1240px) {

@@ -9,23 +9,23 @@ const HowItWork = () => {
     const messages = [
         {
             text: `${t('howItWorkMessage1')}`,
-            className: '/images/smile7.svg'
+            className: '😥'
         },
         {
             text: `${t('howItWorkMessage2')}`,
-            className: '/images/smile9.svg'
+            className: '😜'
         },
         {
             text: `${t('howItWorkMessage3')}`,
-            className: '/images/smile8.svg'
+            className: '😐'
         },
         {
             text: `${t('howItWorkMessage4')}`,
-            className: '/images/smile9.svg'
+            className: '😄'
         },
         {
             text: `${t('howItWorkMessage5')}`,
-            className: '/images/smile10.svg'
+            className: '😐'
         }
     ]
     return (
@@ -36,7 +36,7 @@ const HowItWork = () => {
                     <div className='howitwork__content-images'>
                        { messages.map((item,i) => {
                           return (
-                            <p key={i} className='howitwork__content-image'>{item.text}<span><img src={item.className} alt={item.text}/></span></p>
+                            <p key={i} className='howitwork__content-image'>{item.text}<span>{item.className}</span></p>
                           )
                           })}
                     </div> 
@@ -49,11 +49,11 @@ const HowItWork = () => {
                     />
                 </div>
                 <div className='howitwork__content-card'>
-                    <span><img className='howitwork__content-img' src='/images/nurse.svg' alt='nurse'/></span>
+                    <span>👩‍⚕️</span>
                     <p className='howitwork__content-smalltext solid'>{t('howItworkSmallCard1')}</p>
                 </div>
                 <div className='howitwork__content-card'>
-                <span><img className='howitwork__content-img' src='/images/fingers.svg' alt='nurse'/></span>
+                <span>🤞</span>
                     <p className='howitwork__content-smalltext solid'>{t('howItworkSmallCard2')}</p>
                 </div>
             </div>
