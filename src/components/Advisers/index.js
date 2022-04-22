@@ -40,7 +40,7 @@ const Advisers = () => {
            
         },
         {
-            src: 'https://bing.com',
+            src: 'https://t.me/friend_first_aid_bot',
             name: `${t('advisersLastTitle')}`
         }
     ]

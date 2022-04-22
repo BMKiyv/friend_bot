@@ -42,7 +42,7 @@ const HowItWork = () => {
                     </div> 
                     <p className='howitwork__content-text solid bold'>{t('howItWorkBigCard')}</p>
                     <Button 
-                        url = 'https://google.com'
+                        url = 'https://t.me/friend_first_aid_bot'
                         theme='main'
                         title={t('firstButtonBlue')}
                         img='/images/tgwhite.png'

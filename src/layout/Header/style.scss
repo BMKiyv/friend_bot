@@ -76,8 +76,10 @@
 
     @media (min-width:320px) and (max-width:1240px) {
       padding: 20px 0 0 0;
-      align-items: flex-start;
       justify-content: center;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
     }
   }
 
@@ -142,10 +144,8 @@
     }
 
     &-mobile {
-      position: absolute;
-      top: 68%;
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 40px;
     }
   }
 

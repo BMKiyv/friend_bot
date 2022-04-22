@@ -26,7 +26,7 @@ const First = () => {
                 <p className='first__header-text'>{t('firstText')}</p>
                 <div className='first__header-button'>
                     <Button 
-                        url = 'https://t.me/friend_first_aid_bot '
+                        url = 'https://t.me/friend_first_aid_bot'
                         theme='main'
                         title={t('firstButtonBlue')}
                         img='/images/tgwhite.png'
