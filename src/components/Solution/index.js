@@ -37,24 +37,34 @@ const Solution = () => {
     useEffect(() => {
         const groupArrSpec = [[]];
 
-        let countArrays = 0;
+       /// let countElements = 0;
+        //let countArrays = 0;
 
-        for (const item of cardData) {
-            if (width < 768) {
-                groupArrSpec[countArrays].push(renderingCard(item));
-                if (countArrays < cardData.length - 1) {
-                    countArrays += 1;
-                    groupArrSpec[countArrays] = [];
+        for (let i=0; i<cardData.length;i++) {
+                if (i<cardData.length-1) {
+                    groupArrSpec[i].push(renderingCard(cardData[i]));
+                    groupArrSpec[i].push(renderingCard(cardData[i+1]));
+                    groupArrSpec[i+1] = [];
                 }
-                else {
-                    countArrays = 0;
-                    break;
-                }
-            }
+                    else{
+                        groupArrSpec[i].push(renderingCard(cardData[i]));
+                        groupArrSpec[i].push(renderingCard(cardData[0]));
+                        console.log(cardData[i],cardData[0],i===cardData.length-1)
+                        break
+                    }
+                    console.log(groupArrSpec);
+                
+
+                // else {
+                //     countArrays = i;
+                //     countElements = 0;
+                //     groupArrSpec[countArrays] = [];
+                // }
         }
-
+       // console.log(groupArrSpec);
         setGroupCards(groupArrSpec)
     },[width,renderingCard]);
+    
 
     
     const renderCards = useCallback(() => {
@@ -85,6 +95,8 @@ const Solution = () => {
                         </div>
                     )
                 }):<Carousel
+                centerMode = {false}
+                autoFocus = {true}
                         {...carouselPropTeam()}>
                         {renderCards()}
                     </Carousel>}

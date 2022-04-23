@@ -21,8 +21,8 @@ export const carouselPropTeam = () => ({
     dynamicHeight:        false,
     emulateTouch:         false,
     //thumbWidth:           number('thumbWidth', 100, {}, valuesGroupId),
-    //selectedItem:         number('selectedItem', 0, {}, valuesGroupId),
-    interval:             1300000,
+    selectedItem:         1,//number('selectedItem', 0, {}, valuesGroupId),
+    interval:             13000,
     transitionTime:       350,
     swipeScrollTolerance: 5,
 });

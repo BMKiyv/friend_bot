@@ -33,7 +33,7 @@ const Principles = () => {
         {
             header: `${t('principlesHeader6')}`,
             text: `${t('principlesText6')}`,
-            className: '🫢'
+            className: '🤭'
         }
     ]
     return (

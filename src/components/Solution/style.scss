@@ -38,9 +38,10 @@
         }
 
         @media (min-width:320px) and (max-width:767px) {
-            grid-template-columns: 1fr;
+            grid-template-columns: 280px 280px;
             display: grid;
             margin-top: 12px;
+            overflow: hidden;
         }
     }
 
@@ -110,3 +111,30 @@
     }
 
 }
+
+// .carousel .slider-wrapper.axis-horizontal .slider .slide.previous{
+//     @media (min-width:320px) and (max-width:767px) {
+//         left: -170px;
+//     }
+// }
+// .carousel .slider-wrapper.axis-horizontal .slider .slide.selected{
+//     @media (min-width:320px) and (max-width:767px) {
+//         left: 0px;
+//     }
+// }
+// .carousel .slide{
+//     @media (min-width:320px) and (max-width:767px) {
+//         left:-130px;
+//     }
+// }
+// .carousel .slider{
+//     @media (min-width:320px) and (max-width:767px) {
+//         width: 400px;
+//     }
+// // }
+// @media (min-width: 320px) and (max-width: 767px){
+//     .solution__wrap{
+//         position: relative;
+//         left: 130px;}
+// }
+
