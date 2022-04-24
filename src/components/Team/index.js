@@ -43,20 +43,20 @@ const Team = () => {
     useEffect(() => {
         const groupArrSpec = [[]];
 
-        let countArrays = 0;
-
-        for (const item of team) {
-            if (width < 768) {
-                groupArrSpec[countArrays].push(renderingCard(item));
-                if (countArrays < team.length - 1) {
-                    countArrays += 1;
-                    groupArrSpec[countArrays] = [];
+        if (width < 768) {
+            for (let i=0; i< team.length;i++) {
+                if (i< team.length-1) {
+                    groupArrSpec[i].push(renderingCard( team[i]));
+                    groupArrSpec[i].push(renderingCard( team[i+1]));
+                    groupArrSpec[i+1] = [];
                 }
-                else {
-                    countArrays = 0;
-                    break;
-                }
-            }
+                    else{
+                        groupArrSpec[i].push(renderingCard( team[i]));
+                        groupArrSpec[i].push(renderingCard( team[0]));
+                        //console.log( processing[i], processing[0],i=== processing.length-1)
+                        break
+                    }
+        }
         }
 
         setGroupTeam(groupArrSpec)

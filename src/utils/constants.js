@@ -22,7 +22,7 @@ export const carouselPropTeam = () => ({
     emulateTouch:         false,
     //thumbWidth:           number('thumbWidth', 100, {}, valuesGroupId),
     selectedItem:         1,//number('selectedItem', 0, {}, valuesGroupId),
-    interval:             13000,
-    transitionTime:       350,
+    interval:             130000,
+    transitionTime:       150,
     swipeScrollTolerance: 5,
 });

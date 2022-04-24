@@ -25,7 +25,7 @@ const Processing = () => {
 
     const renderingCard = useCallback((item) => {
         return (
-            <div className='process__items-item' key={item.title}>
+            <div className='process__items-item' key={Math.random()*10}>
                 <span className='process__items-img'>
                     {item.class}
                 </span>
@@ -43,20 +43,23 @@ const Processing = () => {
 
         let countElements = 0;
 
-        for (const item of processing) {
-            if (width < 768) {
-                groupArrSpec[countArrays].push(renderingCard(item));
-                if (countArrays < processing.length - 1) {
-                    countArrays += 1;
-                    groupArrSpec[countArrays] = [];
+        if (width < 768) {
+            for (let i=0; i< processing.length;i++) {
+                if (i< processing.length-1) {
+                    groupArrSpec[i].push(renderingCard( processing[i]));
+                    groupArrSpec[i].push(renderingCard( processing[i+1]));
+                    groupArrSpec[i+1] = [];
                 }
-                else {
-                    countArrays = 0;
-                    break;
-                }
-            }
-
-            else if (width > 767) {
+                    else{
+                        groupArrSpec[i].push(renderingCard( processing[i]));
+                        groupArrSpec[i].push(renderingCard( processing[0]));
+                        //console.log( processing[i], processing[0],i=== processing.length-1)
+                        break
+                    }
+        }
+        }
+        if (width > 767) {
+        for (const item of processing) {            
                 if (countElements < 4) {
                     countElements += 1;
                 } else {
@@ -64,10 +67,9 @@ const Processing = () => {
                     countElements = 1;
                     groupArrSpec[countArrays] = [];
                 }
-
                 groupArrSpec[countArrays].push(renderingCard(item));
-            }
         }
+    }
 
         setGroupProcess(groupArrSpec)
     },[width,renderingCard]);
@@ -92,7 +94,6 @@ const Processing = () => {
             <h3 className='process__header'>{t('processTitle')}</h3>
             <div className='process__carousel'>
                 <Carousel
-                    statusFormatter={(current, total) => ` ${current} / ${total}`}
                     {...carouselPropTeam()}>
                     {renderSpecialist()}
                 </Carousel>

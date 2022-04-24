@@ -39,11 +39,12 @@
             }
 
         &-hidden{
-            background: var(--card-background);
+            
             border-radius: 0 0 30px 30px;
             //padding: 20px 65px 10px 50px;
     
             @media (min-width:1024px) and (max-width:1240px) {
+                 background: var(--card-background);
                 width: 480px;
                 margin: 0 auto;
                 border-radius: 22px;
@@ -51,6 +52,7 @@
             }
     
             @media (min-width:768px) and (max-width:1023px) {
+                 background: var(--card-background);
                 border-radius: 22px;
                 padding: 28px 84px;
             }
@@ -74,10 +76,13 @@
         &-wrap{
             background: var(--card-background);
             border-radius: 30px;
-            padding: 20px 65px 10px 50px;
+            padding: 20px 65px 50px 50px;
+            height: 730px;
+            overflow: auto;
     
             @media (min-width:1024px) and (max-width:1240px) {
                 width: 570px;
+                height: 610px;
                 margin: 0 auto;
                 border-radius: 22px;
                 padding: 44px 46px 31px;
@@ -88,6 +93,7 @@
                 border-radius: 22px;
                 padding: 0;
                 background: transparent;
+                height: 560px;
             }
              @media (min-width:320px) and (max-width:767px) {
                 border-radius: 22px;
@@ -205,8 +211,9 @@
         }
 
         @media (min-width:320px) and (max-width:767px) {
-            grid-template-columns: 280px;
+            grid-template-columns: 280px 280px;
             grid-column-gap: 0;
+            overflow: hidden;
         }
 
         &-item {

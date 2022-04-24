@@ -20,7 +20,7 @@ const Solution = () => {
     
     const renderingCard = useCallback((item) => {
         return (
-            <div className='solution__card' key = {item.class}>
+            <div className='solution__card' key={Math.random()*10}>
             <div className='solution__card-img'>
                 <img src={item.class} alt={item.description}/>
             </div>
@@ -49,10 +49,10 @@ const Solution = () => {
                     else{
                         groupArrSpec[i].push(renderingCard(cardData[i]));
                         groupArrSpec[i].push(renderingCard(cardData[0]));
-                        console.log(cardData[i],cardData[0],i===cardData.length-1)
+                        //console.log(cardData[i],cardData[0],i===cardData.length-1)
                         break
                     }
-                    console.log(groupArrSpec);
+                   // console.log(groupArrSpec);
                 
 
                 // else {
@@ -84,7 +84,7 @@ const Solution = () => {
     return (
         <div className='container solution' id='solution'>
             <h3 className='solution__header'>{t('solutionTitle')}</h3>
-            <div className={width > 767?'solution__wrap':''}>
+            <div className={width > 767?'solution__wrap':'solution__wrap-mobile'}>
                 {width > 767?cardData.map((item, i) => {
                     return (
                         <div className='solution__card' key = {i}>

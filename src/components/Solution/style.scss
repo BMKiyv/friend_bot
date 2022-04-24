@@ -42,6 +42,12 @@
             display: grid;
             margin-top: 12px;
             overflow: hidden;
+            grid-column-gap: 0px;
+        }
+        &-mobile{
+            @media (min-width:320px) and (max-width:767px) {
+                //margin-left: 15px;
+            }
         }
     }
 
@@ -69,7 +75,7 @@
         }
         
         @media (min-width:320px) and (max-width:767px) {
-            margin: 0 15px;
+            margin: 0 10px 0 15px;
             align-items: center;
         }
 
@@ -81,6 +87,9 @@
             //width: 174px;
             height: 50%;
             margin: 0 auto;
+            @media (min-width:320px) and (max-width:767px) {
+                max-width: 60px;
+            }
 
             & img {
                 width: 100%;
@@ -91,6 +100,9 @@
                     max-width: 91px;
                     max-height: 80px;
                 }
+                @media (min-width:320px) and (max-width:767px) {
+                    height: auto;
+                    }
             }
         }
 
@@ -112,29 +124,10 @@
 
 }
 
-// .carousel .slider-wrapper.axis-horizontal .slider .slide.previous{
-//     @media (min-width:320px) and (max-width:767px) {
-//         left: -170px;
-//     }
-// }
-// .carousel .slider-wrapper.axis-horizontal .slider .slide.selected{
-//     @media (min-width:320px) and (max-width:767px) {
-//         left: 0px;
-//     }
-// }
-// .carousel .slide{
-//     @media (min-width:320px) and (max-width:767px) {
-//         left:-130px;
-//     }
-// }
-// .carousel .slider{
-//     @media (min-width:320px) and (max-width:767px) {
-//         width: 400px;
-//     }
-// // }
-// @media (min-width: 320px) and (max-width: 767px){
-//     .solution__wrap{
-//         position: relative;
-//         left: 130px;}
-// }
+.carousel .slider {
+    opacity: 0.2;
+}
 
+.carousel .slider.animated{
+    opacity: 1;
+}

@@ -3,7 +3,7 @@ import './style.scss';
 import Navigation from '../../components/Navigation';
 import { useOnScroll } from '../../utils/customHooks/useOnScroll';
 import { useTranslation } from "react-i18next";
-//import { LANG } from "../../utils/constants";
+import {HashLink} from 'react-router-hash-link';
 
 const Header = ({mobile}) => {
     const { i18n } = useTranslation();
@@ -11,6 +11,7 @@ const Header = ({mobile}) => {
     const [activeLang,setActiveLang] = useState('uk');
     const bgLight = useOnScroll();
     const isShown = useOnScroll();
+    const num = -110;
 
 
 
@@ -20,22 +21,6 @@ const Header = ({mobile}) => {
 
         
       };
-    
-
-    //  const onChangeLang = (event) => {
-    //     //console.log('TRUE');
-    //     const lg = event?.target?.lang;
-    //     if (LANG === lg) {
-    //         return null;
-    //     }
-    //     window.localStorage.setItem('lg', lg);
-    //     window.location = lg === 'uk' ? '/' : `/${lg}`;
-
-    // };
-
-    // const isActive = (hash, find) => {
-    //     return hash === find;
-    // };
 
     useEffect(()=>setMobileNav(mobile),[mobile])
 
@@ -49,11 +34,20 @@ const Header = ({mobile}) => {
         burger.checked = false
     }
 
+        const scrollWithOffset = (el) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        const yOffset = num; 
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+    }
+
     return (
         <div className={(bgLight && !mobileNav) ? 'header header-white' : mobileNav?'header header-mob':'header header-transparent'}>
-            <div className='header__visible header__logo'>
+            <HashLink to ='/#main'
+             onClick={closeMobileNav} smooth 
+             scroll={el => scrollWithOffset(el)} 
+             className='header__visible header__logo'>
                 <img src='/images/headlogo.png' alt='logo' />
-            </div>
+            </HashLink>
             <div className={mobileNav ? 'header__mobile' : 'header__wrap'}>
                 <div className={mobileNav ? 'container header__wrap': 'container header__pad'}>
 

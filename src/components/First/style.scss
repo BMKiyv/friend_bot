@@ -39,8 +39,15 @@
         }
 
         &-title{
+            width: 530px;
             @media (min-width:1024px) and (max-width:1240px) {
                 width: 90%;
+            }
+            @media (min-width:768px) and (max-width:1023px) {
+            padding-top: 25px;
+        }
+            @media (min-width:320px) and (max-width:767px) {
+                width: 360px;
             }
         }
         &-span{

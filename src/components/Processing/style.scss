@@ -13,12 +13,15 @@
         @media (min-width:1024px) and (max-width:1240px) {
             margin-bottom: 42px;
         }
+        @media (min-width:320px) and (max-width:767px) {
+           // margin-left: 15px;
+        }
     }
 
     &__items {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-column-gap: 20px;
+        grid-column-gap: 0px;
 
         @media (min-width:1024px) and (max-width:1240px) {
             grid-column-gap: 15px;
@@ -29,8 +32,9 @@
         }
 
         @media (min-width:320px) and (max-width:767px) {
-            grid-template-columns: 280px;
+            grid-template-columns: 280px 280px;
             grid-column-gap: 0px;
+            overflow: hidden;
         }
 
         &-item {
@@ -57,7 +61,7 @@
             }
 
             @media (min-width:320px) and (max-width:767px) {
-                margin: 0 15px;
+                margin: 0 10px 0 15px;
             }
         }
 
