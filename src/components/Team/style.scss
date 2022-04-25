@@ -9,7 +9,7 @@
          }
 
     @media (min-width:1024px) and (max-width:1240px) {
-        grid-template-rows: 940px 320px;
+        grid-template-rows: 690px 320px;
         grid-template-columns: 1fr;
         grid-column-gap: 0;
         grid-row-gap: 70px;
@@ -17,10 +17,10 @@
     }
 
     @media (min-width:768px) and (max-width:1023px) {
-        grid-template-rows: 840px 360px;
+        grid-template-rows: 650px 360px;
         grid-template-columns: 1fr;
         grid-column-gap: 0;
-        grid-row-gap: 40px;
+        grid-row-gap: 0px;
         padding-bottom: 0px;
     }
 
@@ -34,35 +34,54 @@
  
              @media (min-width:320px) and (max-width:767px) {
                 border-radius: 22px;
-                //padding: 44px 30px;
-                margin: 0 15px;
+                border-radius: 22px;
+                background: var(--card-background);
+                padding: 44px 30px;
             }
+
+        &-block{
+            height: 100%;
+            overflow: auto;
+            padding-right: 10px;
+            @media (min-width:320px) and (max-width:767px) { 
+                overflow: hidden;
+                padding-right: 0px;
+                max-height: 289px;
+                    margin-bottom: 10px;
+                }
+                &-open{
+                    max-height: 100%;
+                    margin-bottom: 10px;
+                }
+        }
 
         &-hidden{
             
             border-radius: 0 0 30px 30px;
-            //padding: 20px 65px 10px 50px;
+            //overflow: auto;
+            height: calc(100% - 100px);
     
             @media (min-width:1024px) and (max-width:1240px) {
                  background: var(--card-background);
                 width: 480px;
                 margin: 0 auto;
                 border-radius: 22px;
-               padding: 44px 46px 31px;
+               padding: 44px 36px 31px;
             }
     
             @media (min-width:768px) and (max-width:1023px) {
                  background: var(--card-background);
                 border-radius: 22px;
                 padding: 28px 84px;
+                height: 504px;
             }
             @media (min-width:320px) and (max-width:767px) { 
-            max-height: 289px;
+            max-height: 349px;
             overflow: hidden;
             margin-bottom: 20px;
-                //border-radius: 22px;
-                //padding: 44px 30px;
-                margin: 0 15px;
+            border-radius: 22px;
+            padding: 44px 30px;
+            background: var(--card-background);
             }
         }
 
@@ -78,7 +97,7 @@
             border-radius: 30px;
             padding: 20px 65px 50px 50px;
             height: 730px;
-            overflow: auto;
+            //overflow: auto;
     
             @media (min-width:1024px) and (max-width:1240px) {
                 width: 570px;
@@ -97,8 +116,10 @@
             }
              @media (min-width:320px) and (max-width:767px) {
                 border-radius: 22px;
-                padding: 44px 30px;
+                padding: 0px;
                 margin: 0 15px;
+                height: 100%;
+                background: transparent;
             }
         }
 
@@ -214,6 +235,7 @@
             grid-template-columns: 280px 280px;
             grid-column-gap: 0;
             overflow: hidden;
+                width: 100%;
         }
 
         &-item {

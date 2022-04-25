@@ -43,6 +43,7 @@
             margin-top: 12px;
             overflow: hidden;
             grid-column-gap: 0px;
+            width: 100%;
         }
         &-mobile{
             @media (min-width:320px) and (max-width:767px) {

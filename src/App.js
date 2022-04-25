@@ -10,7 +10,7 @@ function App() {
   const customHistory = createBrowserHistory();
   // let path = customHistory
   return (
-    <Suspense fallback='Завантажуємось...'>
+    <Suspense fallback={<div className='loading'>Завантажуємось...</div>}>
  
          <Routes history = {customHistory}> 
          <Route path = '/' element = {<Main />} >
