@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 const Navigation = ({footer,mobileNav,onClose}) => {
     const { t } = useTranslation();
-    let num = -80;
+    let num = -110;
     const scrollWithOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
         const yOffset = num; 

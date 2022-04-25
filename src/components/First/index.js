@@ -19,7 +19,7 @@ const First = () => {
     return (
         <div className='first' id='main'>
             <div className='first__absolute'></div>
-            <div className='container'>
+            <div className='container first__title'>
                 <div className='first__header'>
                     <h1 className='first__header-title'>{t('firstTitle1')}<span role="img" >🙏</span>{t('firstTitle2')} {t('firstTitle3')}<span role="img">🇺🇦</span></h1>
                 </div>

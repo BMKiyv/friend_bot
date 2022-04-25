@@ -55,7 +55,7 @@
     &__card {
         display: flex;
         flex-direction: column;
-        padding: 38px;
+        padding: 38px 36px;
         text-align: center;
         background: var(--card-background);
         border-radius: 30px;
@@ -118,7 +118,7 @@
                 line-height: 18px;
             }
             @media (min-width:320px) and (max-width:767px) {
-               width: 150px;
+               width: 166px;
             }
         }
     }

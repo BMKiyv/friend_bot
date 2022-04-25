@@ -11,17 +11,22 @@
     {
       "src": "logo16.png",
       "sizes": "16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
       "src": "logo32.png",
       "sizes": "32x32",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
       "src": "logo64.png",
       "sizes": "64x64",
-      "type": "image/x-icon"
+      "type": "image/png"
+    },
+    {
+      "src": "logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "display": "standalone",

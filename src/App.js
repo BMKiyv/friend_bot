@@ -4,6 +4,7 @@ import { createBrowserHistory } from "history";
 import Home from './pages/Home';
 import Conditions from './pages/Conditions';
 import Main from './layout/Main'
+import Contacts from './pages/Contacts';
 
 
 function App() {
@@ -15,12 +16,9 @@ function App() {
          <Routes history = {customHistory}> 
          <Route path = '/' element = {<Main />} >
             <Route  path = '/' element = {<Home />} />
-            <Route path="/conditions" exact  element ={<Conditions />} />
+            <Route path='/conditions' exact  element ={<Conditions />} />
+            <Route path='/contacts' exact element = {<Contacts />} /> 
           </Route> 
-          {/* <Route path = '/ru' element = {<Main path = {path}/>} >
-            <Route  path = '/ru' element = {<Home />} />
-            <Route path="/ru/conditions" exact  element ={<Conditions />} /> 
-          </Route>  */}
         </Routes>
     </Suspense>
   );

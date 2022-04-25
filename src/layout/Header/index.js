@@ -41,16 +41,17 @@ const Header = ({mobile}) => {
     }
 
     return (
-        <div className={(bgLight && !mobileNav) ? 'header header-white' : mobileNav?'header header-mob':'header header-transparent'}>
+        <header className={(bgLight && !mobileNav) ? 'header header-white' : mobileNav?'header header-mob':'header header-transparent'}>
+            <div className={mobileNav ? 'header__mobile' : 'header-container'}>
+            <div className='header__logo-container'>
             <HashLink to ='/#main'
              onClick={closeMobileNav} smooth 
              scroll={el => scrollWithOffset(el)} 
-             className='header__visible header__logo'>
-                <img src='/images/headlogo.png' alt='logo' />
+             className='header__logo'>
+                <img src='./images/headlogo.png' alt='logo' />
             </HashLink>
-            <div className={mobileNav ? 'header__mobile' : 'header__wrap'}>
-                <div className={mobileNav ? 'container header__wrap': 'container header__pad'}>
-
+            <span className='header__logo-name'>Друг</span>
+            </div>
                     <div>
                         <Navigation
                          mobileNav={mobileNav}
@@ -65,7 +66,6 @@ const Header = ({mobile}) => {
                         className={`header__lang-item${activeLang==='uk' ?'-active':''}`}  
                         onClick = { ()=>changeLanguage("uk") }>UA</button>
                     </div>
-                </div>
             </div>
             <div className={isShown?"hamburgerApp-menu header__visible":"hamburger-menu header__visible"}>
                 <input id={"menu__toggle"} type="checkbox" onClick={activateMobileNav} />
@@ -73,7 +73,7 @@ const Header = ({mobile}) => {
                     <span></span>
                 </label>
             </div>
-        </div>
+        </header>
     )
 }
 

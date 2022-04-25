@@ -12,8 +12,8 @@ const ModalSupport = ({ onClose }) => {
             <h2 className='modalW-title'>{t('modalTitle')}</h2>
             <div className='modalW-text-wrap'>
             <p className='modalW-text'>{t('modalText0')}</p>
-                <p className='modalW-secondtext'>{t('modalText1')}</p>
-                <p className='modalW-secondtext'>{t('modalText2')}</p>
+                {/*<p className='modalW-secondtext'>{t('modalText1')}</p>
+                 <p className='modalW-secondtext'>{t('modalText2')}</p>
                 <p className='modalW-list'><span className='modalW-images'>✅</span>{t('modalList1')}</p>
                 <p className='modalW-list'><span className='modalW-images'>✅</span>{t('modalList2')}</p>
                 <p className='modalW-list'><span className='modalW-images'>✅</span>{t('modalList3')}</p>
@@ -24,7 +24,7 @@ const ModalSupport = ({ onClose }) => {
                 <p className='modalW-list'><span className='modalW-images'>✅</span>{t('modalList8')}</p>
                 <p className='modalW-list'><span className='modalW-images'>✅</span>{t('modalList9')}</p>
                 <p className='modalW-list'><span className='modalW-images'>✅</span>{t('modalList10')}</p>
-                <p className='modalW-lasttext'>{t('modalLastText')}</p>
+                <p className='modalW-lasttext'>{t('modalLastText')}</p> */}
             </div>
             <div className='modalW-btn'>
                 <Btn
