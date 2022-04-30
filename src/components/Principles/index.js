@@ -20,16 +20,6 @@ const Principles = () => {
             text: `${t('principlesText3')}`,
             className: '🤞'
         },
-        // {
-        //     header: `${t('principlesHeader4')}`,
-        //     text: `${t('principlesText4')}`,
-        //     className: '/images/message.svg'
-        // },
-        //  {
-        //     header: `${t('principlesHeader5')}`,
-        //     text: `${t('principlesText5')}`,
-        //     className: '/images/smile3.svg'
-        // },
         {
             header: `${t('principlesHeader6')}`,
             text: `${t('principlesText6')}`,

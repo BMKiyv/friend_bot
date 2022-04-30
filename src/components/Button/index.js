@@ -1,11 +1,7 @@
-//Core
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import './style.scss';
-
-//Utils
-//import { URL_LANG } from '../../utils/constants';
 
 const Btn = ({
     url, theme,img, title, onPress, full, small, nofollow = false,

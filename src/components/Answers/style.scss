@@ -1,59 +1,72 @@
-.answers{
-    &__header{
+.answers {
+    &__header {
         text-align: center;
     }
-    &__details{
+
+    &__details {
         margin-top: 30px;
         margin-bottom: 78px;
-        @media (min-width:1024px) and (max-width:1240px){
+
+        @media (min-width:1024px) and (max-width:1240px) {
             margin-top: 26px;
             margin-bottom: 50px;
             display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media (min-width:768px) and (max-width:1023px){
-        width: 100%;
-    }
+            flex-direction: column;
+            align-items: center;
+
+            @media (min-width:768px) and (max-width:1023px) {
+                width: 100%;
             }
+        }
     }
-    &__item{
+
+    &__item {
         margin: 0 auto;
         width: 800px;
-        @media (min-width:1024px) and (max-width:1240px){
+
+        @media (min-width:1024px) and (max-width:1240px) {
             width: 570px;
             margin: 0;
         }
-        @media (min-width:768px) and (max-width:1023px){
+
+        @media (min-width:768px) and (max-width:1023px) {
             width: inherit;
             margin: 0;
         }
-        @media (min-width:320px) and (max-width:767px){
+
+        @media (min-width:320px) and (max-width:767px) {
             width: inherit;
-             margin: 0;
+            margin: 0;
         }
-        &[open] > .answers__answer{
+
+        &[open]>.answers__answer {
             width: inherit;
             background: var(--card-background);
             border-radius: 0 0 30px 30px;
             margin-top: -7px;
             margin-bottom: 10px;
             padding: 30px 40px;
-            @media (min-width:1024px) and (max-width:1240px){
+
+            @media (min-width:1024px) and (max-width:1240px) {
                 padding: 18px 30px;
                 border-radius: 0 0 22px 22px;
             }
-            @media (min-width:320px) and (max-width:767px){
+
+            @media (min-width:320px) and (max-width:767px) {
                 padding: 25px 25px;
                 font-size: 16px;
                 line-height: 24px;
             }
         }
-        &[open] > .answers__question{
+
+        &[open]>.answers__question {
             border-radius: 30px 30px 0 0;
-            &:before{
+
+            &:before {
                 content: none;
             }
-            &:after{
+
+            &:after {
                 position: absolute;
                 content: '';
                 top: 31px;
@@ -62,18 +75,21 @@
                 width: 3px;
                 height: 23px;
                 transform: rotate(90deg);
-                @media (min-width:1024px) and (max-width:1240px){
+
+                @media (min-width:1024px) and (max-width:1240px) {
                     height: 16px;
                     top: 26px;
                     right: 38px;
                 }
             }
-            @media (min-width:1024px) and (max-width:1240px){
+
+            @media (min-width:1024px) and (max-width:1240px) {
                 border-radius: 22px 22px 0 0;
             }
         }
     }
-    &__question{
+
+    &__question {
         position: relative;
         width: inherit;
         padding: 30px 40px;
@@ -83,22 +99,26 @@
         margin-bottom: 10px;
         list-style: none;
         cursor: pointer;
-         @media (min-width:768px) and (max-width:1240px){
+
+        @media (min-width:768px) and (max-width:1240px) {
             padding: 22px 30px;
             border-radius: 22px;
-         }
-         @media (min-width:320px) and (max-width:767px){
+        }
+
+        @media (min-width:320px) and (max-width:767px) {
             padding: 25px;
-         }
-         & span{
-            @media (min-width:320px) and (max-width:767px){
+        }
+
+        & span {
+            @media (min-width:320px) and (max-width:767px) {
                 width: 80%;
                 display: inline-block;
                 font-size: 16px;
                 line-height: 24px;
-                }
-         }
-        &:after{
+            }
+        }
+
+        &:after {
             position: absolute;
             content: '';
             top: 31px;
@@ -107,13 +127,15 @@
             width: 3px;
             height: 23px;
             transform: rotate(90deg);
-            @media (min-width:1024px) and (max-width:1240px){
+
+            @media (min-width:1024px) and (max-width:1240px) {
                 height: 16px;
                 top: 26px;
                 right: 38px;
             }
         }
-        &:before{
+
+        &:before {
             position: absolute;
             content: '';
             top: 31px;
@@ -121,10 +143,11 @@
             background: #386CC5;
             width: 3px;
             height: 23px;
-            @media (min-width:1024px) and (max-width:1240px){
+
+            @media (min-width:1024px) and (max-width:1240px) {
                 height: 16px;
-                 top: 26px;
-                 right: 38px;
+                top: 26px;
+                right: 38px;
             }
         }
     }

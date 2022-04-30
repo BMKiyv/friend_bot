@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './style.scss';
 import Button from '../Button/index';
 import Modal from '../Modal';
@@ -6,10 +6,10 @@ import ModalSupport from '../Modal/ModalSupport';
 import { useTranslation } from "react-i18next";
 
 const First = () => {
-     const { t } = useTranslation();
-    const [isModal,setIsModal] = useState(false)
+    const { t } = useTranslation();
+    const [isModal, setIsModal] = useState(false)
 
-    const showModal = () =>{
+    const showModal = () => {
         setIsModal(true)
     }
     const hideModal = () => {
@@ -25,14 +25,13 @@ const First = () => {
                 </div>
                 <p className='first__header-text'>{t('firstText')}</p>
                 <div className='first__header-button'>
-                    <Button 
-                        url = 'https://t.me/friend_first_aid_bot'
+                    <Button
+                        url='https://t.me/friend_first_aid_bot'
                         theme='main'
                         title={t('firstButtonBlue')}
                         img='/images/tgwhite.png'
                     />
-                    {/* <div className='first__header-placeholder'>{t('firstPopUp')}</div> */}
-                    <Button 
+                    <Button
                         placeholder
                         theme='second'
                         title={t('firstButtonWhite')}
@@ -40,7 +39,7 @@ const First = () => {
                     />
                 </div>
             </div>
-            {isModal && <Modal isModal = {isModal}><ModalSupport onClose={hideModal}/></Modal>}
+            {isModal && <Modal isModal={isModal}><ModalSupport onClose={hideModal} /></Modal>}
         </div>
     )
 }

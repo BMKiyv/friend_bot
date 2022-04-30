@@ -1,81 +1,98 @@
-.principles{
-    &__content{
+.principles {
+    &__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 12px;
         margin-top: 30px;
         margin-bottom: 54px;
-         @media (min-width:1024px) and (max-width:1240px){
+
+        @media (min-width:1024px) and (max-width:1240px) {
             margin-top: 20px;
             margin-bottom: 38px;
-         }
-         @media (min-width:768px) and (max-width:1023px){
+        }
+
+        @media (min-width:768px) and (max-width:1023px) {
             grid-template-columns: 1fr;
-         }
-         @media (min-width:320px) and (max-width:767px){
+        }
+
+        @media (min-width:320px) and (max-width:767px) {
             grid-template-columns: 1fr;
-         }
-        &-item{
+        }
+
+        &-item {
             display: flex;
             background: var(--card-background);
             border-radius: 20px;
             margin-bottom: 12px;
             padding: 15px 30px 25px;
             align-items: center;
-            @media (min-width:1024px) and (max-width:1240px){
+
+            @media (min-width:1024px) and (max-width:1240px) {
                 padding: 15px 21px 25px;
             }
-            @media (min-width:768px) and (max-width:1023px){
+
+            @media (min-width:768px) and (max-width:1023px) {
                 width: 628px;
             }
-            @media (min-width:320px) and (max-width:767px){
+
+            @media (min-width:320px) and (max-width:767px) {
                 flex-direction: column;
                 padding: 30px;
                 align-items: flex-start;
             }
-            & span{
+
+            & span {
                 font-size: 44px;
                 margin-right: 20px;
-                @media (min-width:1024px) and (max-width:1240px){
+
+                @media (min-width:1024px) and (max-width:1240px) {
                     font-size: 36px;
                 }
-                @media (min-width:320px) and (max-width:767px){
+
+                @media (min-width:320px) and (max-width:767px) {
                     font-size: 50px;
                     line-height: 50px;
                 }
             }
         }
-        &-mean{
+
+        &-mean {
             display: flex;
             flex-direction: column;
             margin-left: 5px;
             width: 64%;
-            @media (min-width:320px) and (max-width:767px){
+
+            @media (min-width:320px) and (max-width:767px) {
                 width: 100%;
             }
         }
-        &-header{
+
+        &-header {
             font-size: 18px;
             line-height: 28px;
             padding: 10px 0 3px;
-             @media (min-width:1024px) and (max-width:1240px){
+
+            @media (min-width:1024px) and (max-width:1240px) {
                 font-size: 13px;
                 line-height: 20px;
-             }
-             @media (min-width:320px) and (max-width:767px){
+            }
+
+            @media (min-width:320px) and (max-width:767px) {
                 font-size: 16px;
                 line-height: 22px;
-             }
+            }
         }
-        &-text{
+
+        &-text {
             font-size: 16px;
             line-height: 24px;
-            @media (min-width:1024px) and (max-width:1240px){
+
+            @media (min-width:1024px) and (max-width:1240px) {
                 font-size: 11px;
                 line-height: 19px;
             }
         }
     }
-    
+
 
 }

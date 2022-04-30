@@ -7,7 +7,6 @@
   padding: 11px 30px;
   min-width: 156px;
   text-align: center;
-  //max-width: 220px;
   cursor: pointer;
 
   @media (min-width:768px) and (max-width:1240px) {
@@ -49,7 +48,7 @@
 
     @media (min-width:320px) and (max-width:767px) {
       width: 220px;
-      }
+    }
 
     &:hover {
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -70,18 +69,19 @@
       width: 188px;
       margin-left: 0;
     }
-     @media (min-width:768px) and (max-width:1023px) {
+
+    @media (min-width:768px) and (max-width:1023px) {
       margin-left: 0;
       width: 160px;
       padding: 3px 0px;
-     }
-     @media (min-width:1024px) and (max-width:1240px) {
+    }
+
+    @media (min-width:1024px) and (max-width:1240px) {
       width: 160px;
       padding: 4px 0px;
-     }
+    }
 
     &:hover {
-      //opacity: 0.7;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
@@ -97,20 +97,23 @@
 
   &-full {
     width: 280px;
+
     @media (min-width:768px) and (max-width:1240px) {
       width: 200px;
     }
+
     @media (min-width:320px) and (max-width:767px) {
       width: 250px;
       margin: 0 auto;
     }
   }
 
-  &-small{
+  &-small {
     @media (min-width:768px) and (max-width:1023px) {
       width: 156px;
       padding: 4px 6px;
     }
+
     @media (min-width:320px) and (max-width:767px) {
       width: 176px;
     }

@@ -11,17 +11,20 @@
         position: relative;
     }
 
-    &__title{
+    &__title {
         padding-bottom: 60px;
+
         @media (min-width:1024px) and (max-width:1240px) {
             padding-bottom: 50px;
         }
+
         @media (min-width:768px) and (max-width:1023px) {
             padding-bottom: 43px;
         }
-         @media (min-width:320px) and (max-width:767px) {
+
+        @media (min-width:320px) and (max-width:767px) {
             padding-bottom: 32px;
-         }
+        }
     }
 
     &__header {
@@ -41,20 +44,23 @@
             width: 100%;
         }
 
-        &-title{
+        &-title {
             width: 530px;
+
             @media (min-width:1024px) and (max-width:1240px) {
                 width: 71%;
             }
+
             @media (min-width:768px) and (max-width:1023px) {
-            //padding-top: 25px;
                 width: 450px;
-        }
+            }
+
             @media (min-width:320px) and (max-width:767px) {
                 width: 100%;
             }
         }
-        &-span{
+
+        &-span {
             display: block;
         }
 
@@ -81,6 +87,7 @@
 
         &-button {
             position: relative;
+
             @media (min-width:768px) and (max-width:1023px) {
                 display: flex;
                 flex-direction: column;
@@ -95,32 +102,12 @@
                 height: 118px;
                 justify-content: space-between;
             }
-            &:hover{
-                .first__header-placeholder{
+
+            &:hover {
+                .first__header-placeholder {
                     visibility: visible;
                 }
             }
-        }
-        &-placeholder{
-            visibility: hidden;
-            font-size: 22px;
-            top: -200px;
-            background: var(--white);
-            left: 30%;
-            text-align: center;
-            padding: 15px;
-            position: absolute;
-            width: 400px;
-            height: 123px;
-            border: 2px solid var(--blue-color);
-            border-radius: 30px;
-            @media (min-width:320px) and (max-width:767px) {
-                width: calc(100% - 60px);
-                font-size: 18px;
-                 height: 150px;
-                left: 15px;
-            }
-
         }
     }
 
@@ -136,11 +123,12 @@
         background-size: contain;
 
         @media (min-width:1024px) and (max-width:1088px) {
-            background-image: url('../../img/firstphone.png');            
+            background-image: url('../../img/firstphone.png');
             top: -40px;
             width: 56%;
             background-size: cover;
         }
+
         @media (min-width:1089px) and (max-width:1240px) {
             top: -95px;
         }

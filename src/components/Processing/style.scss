@@ -13,9 +13,8 @@
         @media (min-width:1024px) and (max-width:1240px) {
             margin-bottom: 42px;
         }
-        @media (min-width:320px) and (max-width:767px) {
-           // margin-left: 15px;
-        }
+
+        @media (min-width:320px) and (max-width:767px) {}
     }
 
     &__items {
@@ -35,7 +34,7 @@
             grid-template-columns: 280px 280px;
             grid-column-gap: 0px;
             overflow: hidden;
-                width: 100%;
+            width: 100%;
         }
 
         &-item {
@@ -105,8 +104,8 @@
 
         &-img {
             margin: 0;
-           font-size: 54px;
-           line-height: 54px;
+            font-size: 54px;
+            line-height: 54px;
 
             @media (min-width:768px) and (max-width:1240px) {
                 font-size: 39px;

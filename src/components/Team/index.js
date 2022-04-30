@@ -53,7 +53,6 @@ const Team = () => {
                 else {
                     groupArrSpec[i].push(renderingCard(team[i]));
                     groupArrSpec[i].push(renderingCard(team[0]));
-                    //console.log( processing[i], processing[0],i=== processing.length-1)
                     break
                 }
             }
@@ -81,23 +80,23 @@ const Team = () => {
             <div className='team___history-wrap' id='story'>
                 <h3 className='team___history-title'>{t('teamTitle')}</h3>
                 <div className={!more ? 'team___history-hidden' : 'team___history'}>
-                <div className={!more ? 'team___history-block': 'team___history-block-open'}>
-                    <p className='team___history-firstcontent'>{t('teamHistory1')}</p>
-                    <p className='team___history-firstcontent'>{t('teamHistory2')}</p>
-                    <p className='team___history-firstcontent'>{t('teamHistory3')}</p>
-                    <p className='team___history-firstcontent'>{t('teamHistory4')}</p>
-                    <p className='team___history-firstcontent'>{t('teamHistory5')}</p>
-                    <p className='team___history-firstcontent'>{t('teamHistory6')}</p>
-                    <p className='team___history-firstcontent'>{t('teamHistory7')}</p>
-                </div>
-                <div className='team___history-btn'>
-                    <Btn
-                        theme='more'
-                        title=''
-                        onPress={readTeam}
-                        img={more ? '/images/btnless.svg' : '/images/bull3.svg'}
-                    />
-                </div>
+                    <div className={!more ? 'team___history-block' : 'team___history-block-open'}>
+                        <p className='team___history-firstcontent'>{t('teamHistory1')}</p>
+                        <p className='team___history-firstcontent'>{t('teamHistory2')}</p>
+                        <p className='team___history-firstcontent'>{t('teamHistory3')}</p>
+                        <p className='team___history-firstcontent'>{t('teamHistory4')}</p>
+                        <p className='team___history-firstcontent'>{t('teamHistory5')}</p>
+                        <p className='team___history-firstcontent'>{t('teamHistory6')}</p>
+                        <p className='team___history-firstcontent'>{t('teamHistory7')}</p>
+                    </div>
+                    <div className='team___history-btn'>
+                        <Btn
+                            theme='more'
+                            title=''
+                            onPress={readTeam}
+                            img={more ? '/images/btnless.svg' : '/images/bull3.svg'}
+                        />
+                    </div>
                 </div>
             </div>
             <div className='team__gallery' id='team'>
