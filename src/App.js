@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Conditions from './pages/Conditions';
 import Main from './layout/Main'
 import Contacts from './pages/Contacts';
+import NotFound from './pages/NotFound';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route  path = '/' element = {<Home />} />
             <Route path='/conditions' exact  element ={<Conditions />} />
             <Route path='/contacts' exact element = {<Contacts />} /> 
+            <Route path = '*' element = {<NotFound />} />
           </Route> 
         </Routes>
     </Suspense>
