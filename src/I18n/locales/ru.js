@@ -1,4 +1,4 @@
-{
+const ru = {
     "navMain": "ГЛАВНАЯ",
     "navAbout": "ПРО ЧАТБОТ",
     "navHowItWork": "КАК РАБОТАЕТ",
@@ -100,3 +100,5 @@
     
 
 }
+
+export default ru;

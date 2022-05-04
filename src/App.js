@@ -10,7 +10,6 @@ import NotFound from './pages/NotFound';
 
 function App() {
   const customHistory = createBrowserHistory();
-  // let path = customHistory
   return (
     <Suspense fallback={<div className='loading'>Завантажуємось...</div>}>
  
@@ -20,6 +19,12 @@ function App() {
             <Route path='/conditions' exact  element ={<Conditions />} />
             <Route path='/contacts' exact element = {<Contacts />} /> 
             <Route path = '*' element = {<NotFound />} />
+          </Route> 
+          <Route path = '/ru' element = {<Main />} >
+            <Route  path = '/ru' element = {<Home />} />
+            <Route path='/ru/conditions' exact  element ={<Conditions />} />
+            <Route path='/ru/contacts' exact element = {<Contacts />} /> 
+            <Route path = '/ru/*' element = {<NotFound />} />
           </Route> 
         </Routes>
     </Suspense>

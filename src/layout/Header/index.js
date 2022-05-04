@@ -2,25 +2,21 @@ import React, {useEffect, useState} from 'react';
 import './style.scss';
 import Navigation from '../../components/Navigation';
 import { useOnScroll } from '../../utils/customHooks/useOnScroll';
-import { useTranslation } from "react-i18next";
 import {HashLink} from 'react-router-hash-link';
+import i18n from "i18next";
 
 const Header = ({mobile}) => {
-    const { i18n } = useTranslation();
+
     const [mobileNav, setMobileNav] = useState(false);
-    const [activeLang,setActiveLang] = useState('uk');
     const bgLight = useOnScroll();
     const isShown = useOnScroll();
     const num = -110;
 
-
-
-    const changeLanguage = (language) => {
-        setActiveLang(language)
-      return  i18n.changeLanguage(language)
-
-        
-      };
+    const changeUrl = () => {
+        let lang = i18n.language==='ru'? '/': '/ru'
+       let location =  window.location
+       location.replace(lang)
+    }
 
     useEffect(()=>setMobileNav(mobile),[mobile])
 
@@ -60,11 +56,13 @@ const Header = ({mobile}) => {
                     </div>
                     <div className={mobileNav?'header__lang-mobile':'header__lang'}>
                         <button  
-                        className={`header__lang-item${activeLang==='ru' ?'-active':''}`}  
-                        onClick = { ()=>changeLanguage("ru") }>RU</button>
+                        className={`header__lang-item${i18n.language==='ru' ?'-active':''}`}  
+                        onClick = {changeUrl}
+                        href={'/ru'}>RU</button>
                         <button 
-                        className={`header__lang-item${activeLang==='uk' ?'-active':''}`}  
-                        onClick = { ()=>changeLanguage("uk") }>UA</button>
+                        className={`header__lang-item${i18n.language==='uk' ?'-active':''}`} 
+                        onClick = {changeUrl} 
+                        href={'/'}>UA</button>
                     </div>
             </div>
             <div className={isShown?"hamburgerApp-menu header__visible":"hamburger-menu header__visible"}>

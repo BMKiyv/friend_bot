@@ -1,4 +1,4 @@
-{
+const uk = {
     "navMain": "ГОЛОВНА",
     "navAbout": "ПРО ЧАТБОТ",
     "navHowItWork": "ЯК ПРАЦЮЄ",
@@ -98,3 +98,5 @@
     "modalList10": "Частина коштів буде відраховано у фонд повернись живим",
     "modalBtn": "Підтримати нас"
 }
+
+export default uk;
