@@ -7,27 +7,27 @@ const Partners = () => {
     const { t } = useTranslation();
     const partners = [
         {
-            src: './images/moz.png',
+            src: '/images/moz.png',
             alt: 'Міністерство охорони здоров`я',
             href: 'https://moz.gov.ua/'
         },
         {
-            src: './images/minvet.png',
+            src: '/images/minvet.png',
             alt: 'Мінветеранів',
             href: 'https://mva.gov.ua/'
         },
         {
-            src: './images/charite.png',
+            src: '/images/charite.png',
             alt: 'Благодійний фонд Шаріте',
             href: 'https://www.charite.de/'
         },
         {
-            src: './images/inkog.png',
+            src: '/images/inkog.png',
             alt: 'Інститут когнітивно-поведінкової терапії',
             href: 'https://i-cbt.org.ua/'
         },
         {
-            src: './images/bogomoltsa.png',
+            src: '/images/bogomoltsa.png',
             alt: 'Медичний Університет ім. Богомольця',
             href: 'https://nmuofficial.com/'
         }

@@ -44,7 +44,7 @@ const Header = ({mobile}) => {
              onClick={closeMobileNav} smooth 
              scroll={el => scrollWithOffset(el)} 
              className='header__logo'>
-                <img src='./images/headlogo.png' alt='logo' />
+                <img src='/images/headlogo.png' alt='logo' />
             </HashLink>
             <span className='header__logo-name'>Друг</span>
             </div>
